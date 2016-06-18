@@ -22,9 +22,9 @@
 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://localhost/mikrotikadmin_test?characterEncoding=utf-8" />
+			value="jdbc:mysql://192.168.88.5/radius?characterEncoding=utf-8" />
 		<property name="username" value="root" />
-		<property name="password" value="123456" />
+		<property name="password" value="root" />
 	</bean>
 
 	<bean id="entityManagerFactory"

@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-   config.vm.network "public_network", bridge: "eth0"
+  config.vm.network "public_network", bridge: "eth0", ip: "192.168.88.5"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -118,8 +118,8 @@ EOF
 
      sudo /etc/init.d/mysql restart
      echo "create database radius;" | mysql -uroot -proot
-     echo "create user 'root'@'%' identified by '123456;" | mysql -uroot -proot
-     echo "grant all privileges on 'root'@'%' to *.*;" | mysql -uroot -proot
+     echo "create user 'root'@'%' identified by 'root';" | mysql -uroot -proot
+     echo "grant all privileges on *.* to 'root'@'%';" | mysql -uroot -proot
      echo "flush privileges;" | mysql -uroot -proot
      mysql -uroot -proot -D radius < /etc/freeradius/sql/mysql/schema.sql
      mysql -uroot -proot -D radius < /etc/freeradius/sql/mysql/nas.sql

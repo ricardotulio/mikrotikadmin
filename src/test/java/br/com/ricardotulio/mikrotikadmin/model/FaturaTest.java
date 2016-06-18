@@ -18,8 +18,6 @@ public class FaturaTest {
 		Calendar dataFaturamentoInicio = Calendar.getInstance();
 		dataFaturamentoInicio.add(Calendar.DATE, dataFaturamentoInicio.getActualMaximum(Calendar.DAY_OF_MONTH) * -1);
 		
-		Fatura ultimaFaturaPaga = new Fatura();
-		
 		Cliente cliente = mock(Cliente.class);
 		when(cliente.getValorMensalAPagar()).thenReturn(87.0);
 		
@@ -37,8 +35,6 @@ public class FaturaTest {
 	public void testaSeCalculaValorQuebrado() {
 		Calendar dataFaturamentoInicio = Calendar.getInstance();
 		dataFaturamentoInicio.add(Calendar.DATE, -20);
-		
-		Fatura ultimaFaturaPaga = new Fatura();
 		
 		Cliente cliente = mock(Cliente.class);
 		when(cliente.getValorMensalAPagar()).thenReturn(87.0);

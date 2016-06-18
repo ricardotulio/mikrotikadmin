@@ -2,13 +2,16 @@ package br.com.ricardotulio.mikrotikadmin.model;
 
 import java.util.Calendar;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Max;
@@ -81,6 +84,10 @@ public class Cliente {
 	@OneToOne
 	private Fatura ultimaFaturaPaga;
 
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@PrimaryKeyJoinColumn
+	private RadCheck radCheck = new RadCheck();
+
 	public Long getId() {
 		return id;
 	}
@@ -134,6 +141,7 @@ public class Cliente {
 	}
 
 	public void setLogin(String login) {
+		this.radCheck.setUserName(login);
 		this.login = login;
 	}
 
@@ -142,6 +150,7 @@ public class Cliente {
 	}
 
 	public void setSenha(String senha) {
+		this.radCheck.setValue(senha);
 		this.senha = senha;
 	}
 
@@ -175,6 +184,7 @@ public class Cliente {
 
 	public void setPlano(Plano plano) {
 		this.plano = plano;
+		this.radCheck.addRadGroupReply(plano.getRadGroupReply());
 	}
 
 	public Double getValorMensalAPagar() {
@@ -190,14 +200,20 @@ public class Cliente {
 	}
 
 	public Calendar getDataFaturamentoInicioProximaFatura() {
-		if(this.ultimaFaturaPaga == null) {
+		if (this.ultimaFaturaPaga == null) {
 			return this.dataContrato;
 		}
-		
+
 		Calendar dataFaturamentoInicioProximaFatura = Calendar.getInstance();
-		dataFaturamentoInicioProximaFatura.setTimeInMillis(this.ultimaFaturaPaga.getDataFaturamentoTermino().getTimeInMillis());
+		dataFaturamentoInicioProximaFatura
+				.setTimeInMillis(this.ultimaFaturaPaga.getDataFaturamentoTermino().getTimeInMillis());
 		dataFaturamentoInicioProximaFatura.add(Calendar.DATE, 1);
-		
+
 		return dataFaturamentoInicioProximaFatura;
 	}
+
+	public RadCheck getRadCheck() {
+		return this.radCheck;
+	}
+
 }

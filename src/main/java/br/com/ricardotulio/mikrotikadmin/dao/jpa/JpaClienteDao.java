@@ -24,7 +24,7 @@ public class JpaClienteDao implements ClienteDao {
 		return this.entityManager.createQuery("SELECT c FROM Cliente c", Cliente.class).getResultList();
 	}
 
-	public void persiste(Cliente cliente) {
+	public void persiste(Cliente cliente) {		
 		if (cliente.getId() != null) {
 			this.entityManager.merge(cliente);
 		} else {

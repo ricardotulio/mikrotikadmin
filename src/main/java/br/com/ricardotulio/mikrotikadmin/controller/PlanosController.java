@@ -13,7 +13,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.ricardotulio.mikrotikadmin.dao.PlanoDao;
 import br.com.ricardotulio.mikrotikadmin.model.Plano;
-import me.legrange.mikrotik.ApiConnection;
 
 @Controller
 public class PlanosController {
@@ -26,7 +25,7 @@ public class PlanosController {
 	private static final String PLANO_EXCLUIDO_COM_SUCESSO = "Plano excluído encontrado!";
 
 	@Autowired
-	public PlanosController(PlanoDao planoDao, ApiConnection conn) {
+	public PlanosController(PlanoDao planoDao) {
 		this.planoDao = planoDao;
 	}
 	
