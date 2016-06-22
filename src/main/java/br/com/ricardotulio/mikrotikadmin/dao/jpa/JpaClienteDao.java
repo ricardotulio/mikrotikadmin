@@ -24,7 +24,7 @@ public class JpaClienteDao implements ClienteDao {
 		return this.entityManager.createQuery("SELECT c FROM Cliente c", Cliente.class).getResultList();
 	}
 
-	public void persiste(Cliente cliente) {		
+	public void persiste(Cliente cliente) {
 		if (cliente.getId() != null) {
 			this.entityManager.merge(cliente);
 		} else {
@@ -38,7 +38,10 @@ public class JpaClienteDao implements ClienteDao {
 
 	public List<Cliente> obtemListaAtivosComVencimentoEm(Integer dia) {
 		// TODO: Refatorar essa query
-		return this.entityManager.createQuery("SELECT c FROM Cliente c WHERE c.ativo = true AND diaParaPagamentos = " + dia, Cliente.class).getResultList();
+		return this.entityManager
+				.createQuery("SELECT c FROM Cliente c WHERE c.ativo = true AND diaParaPagamentos = " + dia,
+						Cliente.class)
+				.getResultList();
 	}
 
 }

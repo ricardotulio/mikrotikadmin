@@ -79,7 +79,7 @@
 															title="Editar"><i class="fa fa-pencil"
 																aria-hidden="true"></i></a> <a href="javascript:void(0)"
 															id="btn-excluir-plano" class="btn-excluir-plano"
-															data-plano-id="${plano.id}" title="Excluir"><i
+															data-id="${plano.id}" data-titulo="${plano.titulo}" title="Excluir"><i
 																class="fa fa-trash-o" aria-hidden="true"></i></a></td>
 													</tr>
 												</c:forEach>

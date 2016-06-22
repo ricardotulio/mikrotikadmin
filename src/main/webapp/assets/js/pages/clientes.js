@@ -1,10 +1,10 @@
-$("#btn-excluir-cliente").click(function() {
+$(".btn-excluir-cliente").click(function() {
 	var _this = $(this);
+	var id = _this.data("id");
+	var nome = _this.data("nome");
 	
-	bootbox.confirm("Tem certeza de que deseja excluir este cliente?", function(result) {
+	bootbox.confirm("Tem certeza de que deseja excluir o cliente \"<strong>" + nome + "</strong>\"?", function(result) {
 		if(result)
-			window.location.href = 'excluir/' + _this.attr('data-cliente-id');
+			window.location.href = "excluir/" + id;
 	});
 });
-
-$("#dataContrato").datepicker({language: "pt-BR"});

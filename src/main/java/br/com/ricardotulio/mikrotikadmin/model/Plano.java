@@ -1,16 +1,16 @@
 package br.com.ricardotulio.mikrotikadmin.model;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.DecimalMin;
@@ -24,7 +24,7 @@ public class Plano {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@Column
+	@Column(unique = true)
 	@NotNull
 	@Size(min = 5, max = 30)
 	private String titulo;
@@ -59,10 +59,9 @@ public class Plano {
 
 	@NotNull
 	private boolean ativo = true;
-	
-	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name="radGroupReplyId")
-	private RadGroupReply radGroupReply = new RadGroupReply();
+
+	@OneToMany(mappedBy = "plano")
+	private Collection<Cliente> clientes = new ArrayList<Cliente>();
 
 	public Long getId() {
 		return id;
@@ -77,7 +76,6 @@ public class Plano {
 	}
 
 	public void setTitulo(String titulo) {
-		this.radGroupReply.setGroupName(titulo.trim().replaceAll("\\s+", "").toLowerCase());
 		this.titulo = titulo;
 	}
 
@@ -95,7 +93,6 @@ public class Plano {
 
 	public void setTaxaDownload(Double taxaDownload) {
 		this.taxaDownload = taxaDownload;
-		this.radGroupReply.setValue(Integer.toString((int) (this.taxaUpload * 1024)) + "k/" + Integer.toString((int) (this.taxaDownload * 1024)));
 	}
 
 	public Double getTaxaUpload() {
@@ -104,7 +101,6 @@ public class Plano {
 
 	public void setTaxaUpload(Double taxaUpload) {
 		this.taxaUpload = taxaUpload;
-		this.radGroupReply.setValue(Integer.toString((int) (this.taxaUpload * 1024)) + "k/" + Integer.toString((int) (this.taxaDownload * 1024)) + "k");
 	}
 
 	public Double getValorMensal() {
@@ -130,8 +126,9 @@ public class Plano {
 	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
 	}
-	
-	public RadGroupReply getRadGroupReply() {
-		return this.radGroupReply;
-	}	
+
+	public Collection<Cliente> getClientes() {
+		return Collections.unmodifiableCollection(this.clientes);
+	}
+
 }

@@ -15,4 +15,6 @@ public interface PlanoDao {
 	public void remove(Plano plano);
 
 	public List<Plano> obtemListaDePlanosAtivos();
+
+	public boolean planoPossuiClientes(Plano plano);
 }

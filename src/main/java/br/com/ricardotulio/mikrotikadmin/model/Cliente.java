@@ -1,19 +1,22 @@
 package br.com.ricardotulio.mikrotikadmin.model;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -23,6 +26,7 @@ import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "login") )
 public class Cliente {
 
 	@Id
@@ -31,6 +35,7 @@ public class Cliente {
 
 	@Column
 	@NotNull
+	@Size(min = 3, max = 120)
 	private String nome;
 
 	@Column(unique = true)
@@ -56,12 +61,12 @@ public class Cliente {
 
 	@Column(unique = true)
 	@NotNull
-	@Size(min = 5, max = 20)
+	@Size(min = 6, max = 20)
 	private String login;
 
 	@Column
 	@NotNull
-	@Size(min = 5, max = 20)
+	@Size(min = 6, max = 20)
 	private String senha;
 
 	@Column(updatable = false)
@@ -84,9 +89,8 @@ public class Cliente {
 	@OneToOne
 	private Fatura ultimaFaturaPaga;
 
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@PrimaryKeyJoinColumn
-	private RadCheck radCheck = new RadCheck();
+	@OneToMany(mappedBy = "cliente")
+	private Collection<Fatura> faturas = new ArrayList<Fatura>();
 
 	public Long getId() {
 		return id;
@@ -141,7 +145,6 @@ public class Cliente {
 	}
 
 	public void setLogin(String login) {
-		this.radCheck.setUserName(login);
 		this.login = login;
 	}
 
@@ -150,7 +153,6 @@ public class Cliente {
 	}
 
 	public void setSenha(String senha) {
-		this.radCheck.setValue(senha);
 		this.senha = senha;
 	}
 
@@ -184,7 +186,6 @@ public class Cliente {
 
 	public void setPlano(Plano plano) {
 		this.plano = plano;
-		this.radCheck.addRadGroupReply(plano.getRadGroupReply());
 	}
 
 	public Double getValorMensalAPagar() {
@@ -212,8 +213,7 @@ public class Cliente {
 		return dataFaturamentoInicioProximaFatura;
 	}
 
-	public RadCheck getRadCheck() {
-		return this.radCheck;
+	public Collection<Fatura> getFaturas() {
+		return Collections.unmodifiableCollection(this.faturas);
 	}
-
 }

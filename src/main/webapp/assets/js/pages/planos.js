@@ -1,8 +1,10 @@
-$("#btn-excluir-plano").click(function() {
+$(".btn-excluir-plano").click(function() {
 	var _this = $(this);
+	var id = _this.data("id");
+	var titulo = _this.data("titulo");
 	
-	bootbox.confirm("Tem certeza de que deseja excluir este plano?", function(result) {
+	bootbox.confirm("Tem certeza de que deseja excluir o plano \"<strong>" + titulo + "\"</strong>?", function(result) {
 		if(result)
-			window.location.href = 'excluir/' + _this.attr('data-plano-id');
+			window.location.href = "excluir/" + id;
 	});
 });

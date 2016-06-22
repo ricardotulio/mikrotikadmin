@@ -45,6 +45,8 @@
 <!-- bootstrap wysihtml5 - text editor -->
 <link rel="stylesheet"
 	href="<c:url value="/assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" />">
+<!-- Parsleyjs - Validador de formulário -->
+<link rel="stylesheet" href="<c:url value="/assets/plugins/parsley/parsley.css" />">
 
 <!-- CSS da aplicação -->
 <link rel="stylesheet" href="<c:url value="/assets/css/style.min.css" />">

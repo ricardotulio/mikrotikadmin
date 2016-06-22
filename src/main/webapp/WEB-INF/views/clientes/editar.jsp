@@ -27,7 +27,7 @@
 				<div class="box-header with-border">
 					<h3 class="box-title">Informe os dados do cliente</h3>
 				</div>
-				<form role="form" method="POST">
+				<form id="form-editar-cliente" name="form-cliente" role="form" method="POST">
 					<c:import url="/WEB-INF/views/clientes/formulario.jsp" />
 				</form>
 			</div>

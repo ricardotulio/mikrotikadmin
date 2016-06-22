@@ -132,10 +132,11 @@
 			<version>${quartz.version}</version>
 		</dependency>
 
+		<!-- Jackson JSON Mapper -->
 		<dependency>
-			<groupId>me.legrange</groupId>
-			<artifactId>mikrotik</artifactId>
-			<version>3.0.1</version>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.10</version>
 		</dependency>
 	</dependencies>
 

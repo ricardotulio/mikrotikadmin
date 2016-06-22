@@ -1,24 +1,35 @@
 package br.com.ricardotulio.mikrotikadmin.model;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity(name = "radgroupreply")
-public class RadGroupReply {
+public class RadGroupReply implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8035854998595534708L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@Column(name = "groupname")
+	@Column
 	@NotNull
 	@Size(max = 64)
-	private String groupName;
+	private String groupname;
 
 	@Column
 	@NotNull
@@ -32,6 +43,12 @@ public class RadGroupReply {
 	@Column
 	private String value;
 
+	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinTable(name = "radusergroup", 
+		joinColumns = @JoinColumn(name = "groupname", referencedColumnName="groupname", unique = false), 
+		inverseJoinColumns = @JoinColumn(name = "username", referencedColumnName="username", unique = false))
+	private List<RadCheck> radChecks = new ArrayList<RadCheck>();
+	
 	public Long getId() {
 		return id;
 	}
@@ -40,12 +57,12 @@ public class RadGroupReply {
 		this.id = id;
 	}
 
-	public String getGroupName() {
-		return groupName;
+	public String getGroupname() {
+		return groupname;
 	}
 
-	public void setGroupName(String groupName) {
-		this.groupName = groupName;
+	public void setGroupname(String groupName) {
+		this.groupname = groupName;
 	}
 
 	public String getAttribute() {

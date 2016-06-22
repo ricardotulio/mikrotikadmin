@@ -1,9 +1,15 @@
-$(document).ready(function() {
-	$('#form-cadastrar-plano').parsley().on('field:validated', function() {
-		var ok = $('.parsley-error').length === 0;
-		$('.bs-callout-info').toggleClass('hidden', !ok);
-		$('.bs-callout-warning').toggleClass('hidden', ok);
-	}).on('form:submit', function() {
-		return false; // Don't submit form for this demo
-	});
+$("#form-cadastrar-plano #btn-salvar").click(function(event) {
+	event.preventDefault();
+	
+	if($("#form-cadastrar-plano").parsley().validate()) {
+		$("#form-cadastrar-plano").submit();
+	} 		
 });
+
+$("#form-editar-plano #btn-salvar").click(function(event) {
+	event.preventDefault();
+	
+	if($("#form-editar-plano").parsley().validate()) {
+		$("#form-editar-plano").submit();
+	} 		
+});	

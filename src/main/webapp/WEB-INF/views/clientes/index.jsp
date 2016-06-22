@@ -78,8 +78,8 @@
 															href="<c:url value="/clientes/editar/" />${cliente.id}"
 															title="Editar"><i class="fa fa-pencil"
 																aria-hidden="true"></i></a> <a href="javascript:void(0)"
-															id="btn-excluir-cliente" class="btn-excluir"
-															data-cliente-id="${cliente.id}" title="Excluir"><i
+															id="btn-excluir-cliente" class="btn-excluir-cliente"
+															data-id="${cliente.id}" data-nome="${cliente.nome}" title="Excluir"><i
 																class="fa fa-trash-o" aria-hidden="true"></i></a></td>
 													</tr>
 												</c:forEach>

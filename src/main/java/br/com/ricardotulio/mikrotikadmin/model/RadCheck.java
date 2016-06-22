@@ -8,8 +8,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -26,13 +24,12 @@ public class RadCheck implements Serializable {
 	private static final long serialVersionUID = -3706626413737304561L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@Column(name = "username")
+	@Column
 	@NotNull
 	@Size(max = 64)
-	private String userName;
+	private String username;
 
 	@Column
 	@NotNull
@@ -47,11 +44,9 @@ public class RadCheck implements Serializable {
 	private String value;
 
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name = "radusergroup", 
-		joinColumns = @JoinColumn(name = "username", referencedColumnName="username"), 
-		inverseJoinColumns = @JoinColumn(name = "groupname", referencedColumnName="groupname"))
+	@JoinTable(name = "radusergroup", joinColumns = @JoinColumn(name = "username", referencedColumnName = "username", unique = false) , inverseJoinColumns = @JoinColumn(name = "groupname", referencedColumnName = "groupname", unique = false) )
 	private List<RadGroupReply> radGroups = new ArrayList<RadGroupReply>();
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -60,12 +55,12 @@ public class RadCheck implements Serializable {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getAttribute() {
@@ -92,12 +87,13 @@ public class RadCheck implements Serializable {
 		this.value = value;
 	}
 
-	public void addRadGroupReply(RadGroupReply radGroupReply) {
+	public void setRadGroupReply(RadGroupReply radGroupReply) {
+		this.radGroups = new ArrayList<RadGroupReply>();
 		this.radGroups.add(radGroupReply);
 	}
-
+	
 	public List<RadGroupReply> getRadGroups() {
 		return radGroups;
 	}
-	
+
 }

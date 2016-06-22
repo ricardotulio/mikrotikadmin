@@ -27,7 +27,7 @@
 				<div class="box-header with-border">
 					<h3 class="box-title">Informe os dados do plano</h3>
 				</div>
-				<form role="form" method="POST">
+				<form id="form-editar-plano" role="form" method="POST">
 					<c:import url="/WEB-INF/views/planos/formulario.jsp" />
 				</form>
 			</div>

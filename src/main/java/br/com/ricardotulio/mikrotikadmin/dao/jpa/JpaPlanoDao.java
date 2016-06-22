@@ -40,4 +40,9 @@ public class JpaPlanoDao implements PlanoDao {
 		return this.entityManager.createQuery("SELECT p FROM Plano p WHERE p.ativo = true", Plano.class)
 				.getResultList();
 	}
+
+	public boolean planoPossuiClientes(Plano plano) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
