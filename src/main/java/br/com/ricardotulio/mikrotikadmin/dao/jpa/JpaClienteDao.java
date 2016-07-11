@@ -36,7 +36,7 @@ public class JpaClienteDao implements ClienteDao {
 		this.entityManager.remove(cliente);
 	}
 
-	public List<Cliente> obtemListaAtivosComVencimentoEm(Integer dia) {
+	public List<Cliente> obtemListaAtivosComVencimentoNoDia(Integer dia) {
 		// TODO: Refatorar essa query
 		return this.entityManager
 				.createQuery("SELECT c FROM Cliente c WHERE c.ativo = true AND diaParaPagamentos = " + dia,

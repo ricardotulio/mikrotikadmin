@@ -1,5 +1,5 @@
 // Validation errors messages for Parsley
-// Load this after Parsley
+import Parsley from '../parsley';
 
 Parsley.addMessages('hr', {
   dateiso:  "Ovo polje treba sadržavati ispravno unešen datum (GGGG-MM-DD).",

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
@@ -39,6 +40,16 @@ public class JpaPlanoDao implements PlanoDao {
 	public List<Plano> obtemListaDePlanosAtivos() {
 		return this.entityManager.createQuery("SELECT p FROM Plano p WHERE p.ativo = true", Plano.class)
 				.getResultList();
+	}
+
+	public Plano obtemPlanoPorTitulo(String titulo) {
+		Query query = this.entityManager.createQuery("SELECT p FROM Plano p WHERE p.titulo LIKE ?", Plano.class);
+		query.setParameter(1, titulo);
+		List<Plano> resultado = query.getResultList();
+
+		if (resultado.size() > 0)
+			return resultado.get(0);
+		return null;
 	}
 
 	public boolean planoPossuiClientes(Plano plano) {

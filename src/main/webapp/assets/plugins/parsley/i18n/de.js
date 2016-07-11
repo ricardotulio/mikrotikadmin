@@ -1,5 +1,5 @@
 // Validation errors messages for Parsley
-// Load this after Parsley
+import Parsley from '../parsley';
 
 Parsley.addMessages('de', {
   defaultMessage: "Die Eingabe scheint nicht korrekt zu sein.",

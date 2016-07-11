@@ -30,11 +30,13 @@ public class PeriodoFaturamento {
 
 	public Long calculaIntervaloEmDias() {
 		Long diferencaEmMilisegundos = this.dataFaturamentoTermino.getTimeInMillis()
-				- this.dataFaturamentoInicio.getTimeInMillis();
-		return TimeUnit.DAYS.convert(diferencaEmMilisegundos, TimeUnit.MILLISECONDS);
+				- this.dataFaturamentoInicio.getTimeInMillis();		
+
+		// 360000 = Uma hora para compensar horário de verão
+		return TimeUnit.DAYS.convert(diferencaEmMilisegundos + 3600000, TimeUnit.MILLISECONDS);
 	}
 	
-	public boolean ehUmMesCompleto() {
+	public boolean completaUmMes() {
 		Long quantidadeDiasNoMes = (long) dataFaturamentoInicio.getActualMaximum(Calendar.DAY_OF_MONTH);
 		return ((quantidadeDiasNoMes - 1) == this.calculaIntervaloEmDias());
 	}

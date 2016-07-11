@@ -1,5 +1,5 @@
 // Validation errors messages for Parsley
-// Load this after Parsley
+import Parsley from '../parsley';
 
 Parsley.addMessages('th', {
   defaultMessage: "ค่านี้ดูเหมือนว่าจะไม่ถูกต้อง",

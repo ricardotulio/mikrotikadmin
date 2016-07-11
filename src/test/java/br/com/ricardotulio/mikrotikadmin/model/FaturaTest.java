@@ -1,116 +1,92 @@
 package br.com.ricardotulio.mikrotikadmin.model;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import java.util.Calendar;
-import java.util.Date;
+import java.util.Arrays;
+import java.util.Collection;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
+@RunWith(Parameterized.class)
 public class FaturaTest {
-	
-	@Test
-	public void testaSeCalculaValorCheio() {
-		Calendar dataFaturamentoInicio = Calendar.getInstance();
-		dataFaturamentoInicio.add(Calendar.DATE, dataFaturamentoInicio.getActualMaximum(Calendar.DAY_OF_MONTH) * -1);
-		
-		Cliente cliente = mock(Cliente.class);
-		when(cliente.getValorMensalAPagar()).thenReturn(87.0);
-		
-		PeriodoFaturamento periodoFaturamento = new PeriodoFaturamento(dataFaturamentoInicio, Calendar.getInstance());
-		
-		Fatura novaFatura = new Fatura();
-		novaFatura.setCliente(cliente);
-		novaFatura.setPeriodoFaturamento(periodoFaturamento);
-		novaFatura.calculaValor();
-		
-		assertEquals(87.0, novaFatura.getValor(), 0.01);
+
+	private static final int QTD_EXECUCOES = 100;
+
+	private Cliente cliente;
+	private PeriodoFaturamento periodoFaturamento;
+	private Object valorEsperadoFatura;
+	private boolean deveLancarFatura;
+
+	@Parameters
+	public static Collection<Object[]> parametros() {
+		Object[][] parametros = new Object[QTD_EXECUCOES][4];
+
+		for (int i = 0; i < QTD_EXECUCOES; i++) {
+			PeriodoFaturamento periodoFaturamento;
+			
+			Cliente cliente = mock(Cliente.class);
+			when(cliente.getValorMensalAPagar()).thenReturn(Math.random() * 300);
+			
+			Double valorEsperado;
+			boolean deveLancarFatura;
+			
+			if(i % 5 == 0) {
+				periodoFaturamento = mock(PeriodoFaturamento.class);
+				when(periodoFaturamento.completaUmMes()).thenReturn(true);
+				
+				valorEsperado = cliente.getValorMensalAPagar();
+			} else {
+				periodoFaturamento = mock(PeriodoFaturamento.class);
+				when(periodoFaturamento.completaUmMes()).thenReturn(false);
+				when(periodoFaturamento.calculaIntervaloEmDias()).thenReturn(new Double(Math.random() * 120).longValue());
+				
+				valorEsperado = cliente.getValorMensalAPagar() / 30 * periodoFaturamento.calculaIntervaloEmDias();
+			}
+			
+			if(valorEsperado < Fatura.VALOR_MINIMO_FATURA) {
+				deveLancarFatura = false;
+			} else {
+				deveLancarFatura = true;
+			}
+			
+			parametros[i][0] = cliente;
+			parametros[i][1] = periodoFaturamento;
+			parametros[i][2] = valorEsperado;
+			parametros[i][3] = deveLancarFatura;
+		}
+
+		return Arrays.asList(parametros);
 	}
-	
-	@Test
-	public void testaSeCalculaValorQuebrado() {
-		Calendar dataFaturamentoInicio = Calendar.getInstance();
-		dataFaturamentoInicio.add(Calendar.DATE, -20);
-		
-		Cliente cliente = mock(Cliente.class);
-		when(cliente.getValorMensalAPagar()).thenReturn(87.0);
-		
-		PeriodoFaturamento periodoFaturamento = new PeriodoFaturamento(dataFaturamentoInicio, Calendar.getInstance());
-		
-		Fatura novaFatura = new Fatura();
-		novaFatura.setCliente(cliente);
-		novaFatura.setPeriodoFaturamento(periodoFaturamento);
-		novaFatura.calculaValor();
-		
-		assertEquals(58.0, novaFatura.getValor(), 0.01);
+
+	public FaturaTest(Cliente cliente, PeriodoFaturamento periodoFaturamento, Double valorEsperadoFatura, boolean deveLancarFatura) {
+		this.cliente = cliente;
+		this.periodoFaturamento = periodoFaturamento;
+		this.valorEsperadoFatura = valorEsperadoFatura;
+		this.deveLancarFatura = deveLancarFatura;
 	}
 
 	@Test
-	public void testaSeNaoLancaFaturaComValorAbaixoDoMinimo() {
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(new Date());
-		calendar.add(Calendar.DATE, -10);
-		
-		Cliente cliente = mock(Cliente.class);
-		when(cliente.getDataContrato()).thenReturn(calendar);
-		when(cliente.getValorMensalAPagar()).thenReturn(87.0);
-		
-		PeriodoFaturamento periodoFechamento = new PeriodoFaturamento(calendar, Calendar.getInstance());
-		
+	public void testaSeCalculaFatura() {
 		Fatura fatura = new Fatura();
-		fatura.setCliente(cliente);
-		fatura.setPeriodoFaturamento(periodoFechamento);
+		fatura.setCliente(this.cliente);
+		fatura.setPeriodoFaturamento(this.periodoFaturamento);
 		fatura.calculaValor();
-		
-		assertFalse(fatura.deveSerLancada());
+
+		assertEquals((Double) this.valorEsperadoFatura, fatura.getValor(), 0.01);
 	}
-	
+
 	@Test
-	public void testaSeLancaFaturaComValorAcimaDoMinimo() {
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(new Date());
-		calendar.add(Calendar.DATE, -12);
-		
-		Cliente cliente = mock(Cliente.class);
-		when(cliente.getDataContrato()).thenReturn(calendar);
-		when(cliente.getValorMensalAPagar()).thenReturn(87.0);
-		
-		PeriodoFaturamento periodoFechamento = new PeriodoFaturamento(calendar, Calendar.getInstance());
-		
+	public void testaSeDeveLancarFaturaSeValorAbaixoDoMinimo() {
 		Fatura fatura = new Fatura();
-		fatura.setCliente(cliente);
-		fatura.setPeriodoFaturamento(periodoFechamento);
+		fatura.setCliente(this.cliente);
+		fatura.setPeriodoFaturamento(this.periodoFaturamento);
 		fatura.calculaValor();
-		
-		assertTrue(fatura.deveSerLancada());
+
+		assertEquals(this.deveLancarFatura, fatura.deveSerLancada());
 	}
-	
-	@Test
-	public void testaSeCalculaDataVencimento() {
-		Calendar dataVencimento1 = Calendar.getInstance();
-		dataVencimento1.set(2016, 5, 4, 0, 0, 0);
-		
-		Calendar dataVencimento2 = Calendar.getInstance();
-		dataVencimento2.set(2016, 5, 5, 0, 0, 0);
-		
-		Calendar proximoDiaUtil = Calendar.getInstance();
-		proximoDiaUtil.set(2016, 5, 6, 0, 0, 0);
-		
-		Fatura fatura = new Fatura();
-		fatura.setDataVencimento(dataVencimento1);
-		assertEquals(proximoDiaUtil.get(Calendar.YEAR), fatura.getDataVencimento().get(Calendar.YEAR));
-		assertEquals(proximoDiaUtil.get(Calendar.MONTH), fatura.getDataVencimento().get(Calendar.MONTH));
-		assertEquals(proximoDiaUtil.get(Calendar.DAY_OF_MONTH), fatura.getDataVencimento().get(Calendar.DAY_OF_MONTH));
-		
-		fatura.setDataVencimento(dataVencimento2);
-		assertEquals(proximoDiaUtil.get(Calendar.YEAR), fatura.getDataVencimento().get(Calendar.YEAR));
-		assertEquals(proximoDiaUtil.get(Calendar.MONTH), fatura.getDataVencimento().get(Calendar.MONTH));
-		assertEquals(proximoDiaUtil.get(Calendar.DAY_OF_MONTH), fatura.getDataVencimento().get(Calendar.DAY_OF_MONTH));
-	}
-	
-	
 }

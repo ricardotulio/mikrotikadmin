@@ -19,7 +19,7 @@
 	</c:if>
 	<c:if test="${not empty error}">
 		<div class="alert alert-danger">${error}</div>
-	</c:if>	
+	</c:if>
 </section>
 
 <!-- Main content -->
@@ -28,6 +28,9 @@
 		<div class="col-xs-12">
 			<div class="box">
 				<div class="box-header">
+					<a href="<c:url value="/faturas/cadastrar" />"
+						class="btn btn-primary pull-right"><i
+						class="fa fa-plus-circle" aria-hidden="true"></i> Cadastrar</a>
 				</div>
 				<div class="box-body">
 					<div id="example2_wrapper"
@@ -49,10 +52,16 @@
 											<th class="sorting_asc" tabindex="0" rowspan="1" colspan="1"
 												aria-sort="ascending">#ID</th>
 											<th class="sorting" tabindex="0" rowspan="1" colspan="1">Cliente</th>
-											<th class="sorting" tabindex="0" rowspan="1" colspan="1">Período de Fechamento</th>
-											<th class="sorting" tabindex="0" rowspan="1" colspan="1">Data de Vencimento</th>
+											<th class="sorting" tabindex="0" rowspan="1" colspan="1">Período
+												de Faturamento</th>
+											<th class="sorting" tabindex="0" rowspan="1" colspan="1">Data
+												de Vencimento</th>
 											<th class="sorting" tabindex="0" rowspan="1" colspan="1">Valor</th>
 											<th class="sorting" tabindex="0" rowspan="1" colspan="1">Status</th>
+											<th class="sorting" tabindex="0" rowspan="1" colspan="1">Data
+												Pgto</th>
+											<th class="sorting" tabindex="0" rowspan="1" colspan="1">Forma
+												Pgto</th>
 											<th class="sorting" tabindex="0" rowspan="1" colspan="1">Ações</th>
 										</tr>
 									</thead>
@@ -64,13 +73,35 @@
 														<td><input type="checkbox" id="register-${fatura.id}"></td>
 														<td><fmt:formatNumber type="number" pattern="0000"
 																value="${fatura.id}" /></td>
-														<td><a href="<c:url value="/clientes/editar/${fatura.cliente.id}" />">${fatura.cliente.nome}</a></td>
-														<td><fmt:formatDate value="${fatura.dataFaturamentoInicio.time}" pattern="dd/MM/yyyy"/> - <fmt:formatDate value="${fatura.dataFaturamentoTermino.time}" pattern="dd/MM/yyyy"/></td>
-														<td><fmt:formatDate value="${fatura.dataVencimento.time}" pattern="dd/MM/yyyy"/></td>
+														<td><a
+															href="<c:url value="/clientes/editar/${fatura.cliente.id}" />">${fatura.cliente.nome}</a></td>
+														<td><fmt:formatDate
+																value="${fatura.dataFaturamentoInicio.time}"
+																pattern="dd/MM/yyyy" /> - <fmt:formatDate
+																value="${fatura.dataFaturamentoTermino.time}"
+																pattern="dd/MM/yyyy" /></td>
+														<td><fmt:formatDate
+																value="${fatura.dataVencimento.time}"
+																pattern="dd/MM/yyyy" /></td>
 														<td><fmt:formatNumber type="currency"
 																value="${fatura.valor}" /></td>
 														<td>${fatura.status}</td>
-														<td><a href="javascript:void(0)" class="btn-cancelar-fatura" data-id="${fatura.id}" title="Cancelar fatura"><i class="fa fa-ban" aria-hidden="true"></i></a></td>
+														<td><fmt:formatDate
+																value="${fatura.dataPagamento.time}"
+																pattern="dd/MM/yyyy" /></td>
+														<td><c:if test="${not empty fatura.formaPagamento}">${fatura.formaPagamento}</c:if></td>
+														<td><a href="javascript:void(0)"
+															class="btn-reenviar-fatura<c:if test="${fatura.status.valor == 2 || fatura.status.valor == 3}"> disabled</c:if>"
+															data-id="${fatura.id}" title="Reenviar Fatura"><i
+																class="fa fa-envelope" aria-hidden="true"></i></a> <a
+															href="javascript:void(0)"
+															class="btn-pagar-fatura<c:if test="${fatura.status.valor == 2 || fatura.status.valor == 3}"> disabled</c:if>"
+															data-id="${fatura.id}" title="Pagar Fatura"><i
+																class="fa fa-money" aria-hidden="true"></i></a> <a
+															href="javascript:void(0)"
+															class="btn-cancelar-fatura<c:if test="${fatura.status.valor == 2 || fatura.status.valor == 3}"> disabled</c:if>"
+															data-id="${fatura.id}" title="Cancelar Fatura"><i
+																class="fa fa-ban" aria-hidden="true"></i></a></td>
 													</tr>
 												</c:forEach>
 											</c:when>

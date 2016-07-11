@@ -1,5 +1,5 @@
 // Validation errors messages for Parsley
-// Load this after Parsley
+import Parsley from '../parsley';
 
 Parsley.addMessages('uk', {
   dateiso:  "Це значення має бути коректною датою (РРРР-ММ-ДД).",

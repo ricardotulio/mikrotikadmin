@@ -17,6 +17,8 @@ import br.com.ricardotulio.mikrotikadmin.dao.PlanoDao;
 import br.com.ricardotulio.mikrotikadmin.dao.RadCheckDao;
 import br.com.ricardotulio.mikrotikadmin.dao.RadGroupReplyDao;
 import br.com.ricardotulio.mikrotikadmin.model.Cliente;
+import br.com.ricardotulio.mikrotikadmin.model.Contato;
+import br.com.ricardotulio.mikrotikadmin.model.Endereco;
 import br.com.ricardotulio.mikrotikadmin.model.Plano;
 import br.com.ricardotulio.mikrotikadmin.model.RadCheck;
 import br.com.ricardotulio.mikrotikadmin.model.RadGroupReply;
@@ -62,10 +64,12 @@ public class ClientesController {
 
 	@RequestMapping(value = { "/clientes/cadastrar", "/clientes/cadastrar/" }, method = RequestMethod.POST)
 	@Transactional
-	public String cadastrarPost(Cliente cliente, @RequestParam("planoId") Long planoId,
+	public String cadastrarPost(Cliente cliente, Endereco endereco, Contato contato, @RequestParam("planoId") Long planoId,
 			final RedirectAttributes redirectAttributes) {
 		Plano plano = this.planoDao.obtem(planoId);
 		cliente.setPlano(plano);
+		cliente.adicionaEndereco(endereco);
+		cliente.adicionaContato(contato);
 		this.clienteDao.persiste(cliente);
 
 		RadCheck radCheck = new RadCheck();
@@ -100,6 +104,7 @@ public class ClientesController {
 	public String editarPost(@PathVariable("id") Long id, Cliente cliente, @RequestParam("planoId") Long planoId,
 			final RedirectAttributes redirectAttributes) {
 		Cliente clienteExiste = this.clienteDao.obtem(id);
+				
 		if (clienteExiste == null) {
 			return this.informaQueClienteNaoExiste(redirectAttributes);
 		}

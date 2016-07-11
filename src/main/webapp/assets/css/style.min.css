@@ -1,3 +1,16 @@
 section.content-header div.alert {
 	margin-top: 0.5em;
 }
+
+a i.fa-trash-o, i.fa-ban {
+	color: red;
+}
+
+a i.fa-money {
+	color: green;
+}
+
+a.disabled, a.disabled i {
+	color: lightgrey !important;
+	cursor: default;
+}

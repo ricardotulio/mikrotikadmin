@@ -17,4 +17,6 @@ public interface PlanoDao {
 	public List<Plano> obtemListaDePlanosAtivos();
 
 	public boolean planoPossuiClientes(Plano plano);
+
+	public Plano obtemPlanoPorTitulo(String titulo);
 }

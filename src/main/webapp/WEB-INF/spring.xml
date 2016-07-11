@@ -22,9 +22,9 @@
 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://192.168.88.5/radius?characterEncoding=utf-8" />
+			value="jdbc:mysql://localhost/mikrotikadmin?characterEncoding=utf-8" />
 		<property name="username" value="root" />
-		<property name="password" value="root" />
+		<property name="password" value="123456" />
 	</bean>
 
 	<bean id="entityManagerFactory"
@@ -41,10 +41,12 @@
 	</bean>
 
 	<tx:annotation-driven />
+	
+	<!-- 
 
 	<bean id="gerenciadorDeFaturasSchedule"
 		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-		<property name="targetObject" ref="faturasController" />
+		<property name="targetObject" ref="gerenciadorDeFaturas" />
 		<property name="targetMethod" value="geraProximasFaturas" />
 	</bean>
 
@@ -56,11 +58,11 @@
 	</bean>
 
 	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
-		<!-- Lista de triggers que devem ser executadas -->
 		<property name="triggers">
 			<list>
 				<ref bean="gerenciadorFaturasTrigger" />
 			</list>
 		</property>
 	</bean>
+	 -->	
 </beans>

@@ -65,7 +65,7 @@
 										<c:choose>
 											<c:when test="${fn:length(planos) gt 0}">
 												<c:forEach var="plano" items="${planos}">
-													<tr role="row" class="odd">
+													<tr role="row" class="odd" data-id="${plano.id}">
 														<td><input type="checkbox" id="register-${plano.id}"></td>
 														<td><fmt:formatNumber type="number" pattern="0000"
 																value="${plano.id}" /></td>
@@ -74,8 +74,8 @@
 														<td>${plano.taxaUpload}MB</td>
 														<td><fmt:formatNumber type="currency"
 																value="${plano.valorMensal}" /></td>
-														<td><a
-															href="<c:url value="/planos/editar/" />${plano.id}"
+														<td><a class="btn-editar"
+															href="<c:url value="/planos/editar/${plano.id}" />"
 															title="Editar"><i class="fa fa-pencil"
 																aria-hidden="true"></i></a> <a href="javascript:void(0)"
 															id="btn-excluir-plano" class="btn-excluir-plano"

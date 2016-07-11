@@ -167,6 +167,9 @@
 <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
+<script>
+	var BASEURL = "${pageContext.request.contextPath}";
+</script>
 
 <!-- jQuery 2.1.4 -->
 <script src="<c:url value="/assets/plugins/jQuery/jQuery-2.1.4.min.js" />"></script>
@@ -223,7 +226,9 @@
 <script src="<c:url value="/assets/plugins/bootbox/bootbox.min.js" />"></script>
 <!-- Parsley.js - Validação de formulário -->
 <script src="<c:url value="/assets/plugins/parsley/parsley.min.js" />"></script>
+<script src="<c:url value="/assets/plugins/parsley/parsley/remote.js" />"></script>
 <script src="<c:url value="/assets/plugins/parsley/parsley-cpf.js" />"></script>
+<script src="<c:url value="/assets/plugins/parsley/parsley-titulo-plano.js" />"></script>
 <script src="<c:url value="/assets/plugins/parsley/i18n/pt-br.js" />"></script>
 
 <!-- Script da página de planos -->
@@ -231,5 +236,6 @@
 <script src="<c:url value="/assets/js/pages/planos_cadastrar.js" />"></script>
 <script src="<c:url value="/assets/js/pages/clientes.js" />"></script>
 <script src="<c:url value="/assets/js/pages/clientes_cadastrar.js" />"></script>
+<script src="<c:url value="/assets/js/pages/faturas.js" />"></script>
 </body>
 </html>

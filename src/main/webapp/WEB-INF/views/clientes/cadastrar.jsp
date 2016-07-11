@@ -18,18 +18,6 @@
 
 <!-- Main content -->
 <section class="content">
-	<div class="row">
-		<div
-			class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-			<div class="box box-primary">
-				<div class="box-header with-border">
-					<h3 class="box-title">Informe os dados do cliente</h3>
-				</div>
-				<form id="form-cadastrar-cliente" name='form-cliente' role="form" method="POST">
-					<c:import url="/WEB-INF/views/clientes/formulario.jsp" />
-				</form>
-			</div>
-		</div>
-	</div>
+	<c:import url="/WEB-INF/views/clientes/formulario.jsp" />
 </section>
 <c:import url="/WEB-INF/views/template/footer.jsp" />

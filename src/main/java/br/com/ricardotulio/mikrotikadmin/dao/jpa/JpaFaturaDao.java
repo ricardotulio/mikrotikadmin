@@ -17,8 +17,7 @@ public class JpaFaturaDao implements FaturaDao {
 	private EntityManager entityManager;
 
 	public Fatura obtem(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.entityManager.find(Fatura.class, id);
 	}
 
 	public List<Fatura> obtemLista() {

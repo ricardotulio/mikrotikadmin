@@ -14,6 +14,6 @@ public interface ClienteDao {
 
 	public void remove(Cliente cliente);
 
-	public List<Cliente> obtemListaAtivosComVencimentoEm(Integer dia);
+	public List<Cliente> obtemListaAtivosComVencimentoNoDia(Integer dia);
 
 }

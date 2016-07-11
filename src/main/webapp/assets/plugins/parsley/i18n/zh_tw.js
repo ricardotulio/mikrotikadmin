@@ -1,5 +1,5 @@
 // Validation errors messages for Parsley
-// Load this after Parsley
+import Parsley from '../parsley';
 
 Parsley.addMessages('zh-tw', {
   defaultMessage: "這個值似乎是無效的。",

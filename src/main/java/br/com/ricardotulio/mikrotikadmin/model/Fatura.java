@@ -19,7 +19,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Fatura {
 
-	private static final Double VALOR_MINIMO_FATURA = 30.0;
+	public static final Double VALOR_MINIMO_FATURA = 30.0;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -50,6 +50,11 @@ public class Fatura {
 	@Temporal(TemporalType.DATE)
 	@NotNull
 	private Calendar dataVencimento;
+
+	@Column
+	@Temporal(TemporalType.DATE)
+	@NotNull
+	private Calendar dataPagamento;
 
 	@Column
 	@Enumerated(EnumType.ORDINAL)
@@ -85,46 +90,68 @@ public class Fatura {
 		this.cliente = cliente;
 	}
 
+	public PeriodoFaturamento getPeriodoFaturamento() {
+		return periodoFaturamento;
+	}
+
 	public void setPeriodoFaturamento(PeriodoFaturamento periodoFaturamento) {
 		this.periodoFaturamento = periodoFaturamento;
-		this.dataFaturamentoInicio = periodoFaturamento.getDataFaturamentoInicio();
-		this.dataFaturamentoTermino = periodoFaturamento.getDataFaturamentoTermino();
 	}
 
 	public Calendar getDataFaturamentoInicio() {
 		return dataFaturamentoInicio;
 	}
 
+	public void setDataFaturamentoInicio(Calendar dataFaturamentoInicio) {
+		this.dataFaturamentoInicio = dataFaturamentoInicio;
+	}
+
 	public Calendar getDataFaturamentoTermino() {
 		return dataFaturamentoTermino;
+	}
+
+	public void setDataFaturamentoTermino(Calendar dataFaturamentoTermino) {
+		this.dataFaturamentoTermino = dataFaturamentoTermino;
 	}
 
 	public Double getValor() {
 		return valor;
 	}
 
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
 	public Calendar getDataVencimento() {
-		Calendar copia = Calendar.getInstance();
-		copia.setTimeInMillis(this.dataVencimento.getTimeInMillis());
-		return copia;
+		return dataVencimento;
 	}
 
 	public void setDataVencimento(Calendar dataVencimento) {
-		if (dataVencimento.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
-			dataVencimento.add(Calendar.DATE, 2);
-		} else if (dataVencimento.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
-			dataVencimento.add(Calendar.DATE, 1);
-		}
-
 		this.dataVencimento = dataVencimento;
+	}
+
+	public Calendar getDataPagamento() {
+		return dataPagamento;
+	}
+
+	public void setDataPagamento(Calendar dataPagamento) {
+		this.dataPagamento = dataPagamento;
 	}
 
 	public StatusFatura getStatus() {
 		return status;
 	}
 
+	public void setStatus(StatusFatura status) {
+		this.status = status;
+	}
+
 	public FormaPagamento getFormaPagamento() {
 		return formaPagamento;
+	}
+
+	public void setFormaPagamento(FormaPagamento formaPagamento) {
+		this.formaPagamento = formaPagamento;
 	}
 
 	public Calendar getCriadoEm() {
@@ -152,7 +179,7 @@ public class Fatura {
 	}
 
 	private boolean deveCalcularValorQuebrado() {
-		return !this.periodoFaturamento.ehUmMesCompleto();
+		return !this.periodoFaturamento.completaUmMes();
 	}
 
 	private void calculaValorCheio() {
@@ -166,6 +193,24 @@ public class Fatura {
 
 	public boolean deveSerLancada() {
 		return this.valor > Fatura.VALOR_MINIMO_FATURA;
+	}
+
+	public boolean cancelada() {
+		return this.status == StatusFatura.CANCELADA;
+	}
+
+	public void cancelar() {
+		this.status = StatusFatura.CANCELADA;
+	}
+
+	public boolean paga() {
+		return this.status == StatusFatura.PAGA;
+	}
+
+	public void pagar(FormaPagamento formaPagamento) {
+		this.status = StatusFatura.PAGA;
+		this.formaPagamento = formaPagamento;
+		this.dataPagamento = Calendar.getInstance();
 	}
 
 }

@@ -1,5 +1,5 @@
 // Validation errors messages for Parsley
-// Load this after Parsley
+import Parsley from '../parsley';
 
 Parsley.addMessages('el', {
   dateiso:  "Η τιμή πρέπει να είναι μια έγκυρη ημερομηνία (YYYY-MM-DD).",

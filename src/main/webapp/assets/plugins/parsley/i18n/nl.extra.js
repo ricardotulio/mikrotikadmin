@@ -1,5 +1,5 @@
 // Validation errors messages for Parsley
-// Load this after Parsley
+import Parsley from '../parsley';
 
 Parsley.addMessages('nl', {
   dateiso:  "Deze waarde moet een datum in het volgende formaat zijn: (YYYY-MM-DD).",

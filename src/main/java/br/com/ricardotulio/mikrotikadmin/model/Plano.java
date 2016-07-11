@@ -45,7 +45,7 @@ public class Plano {
 
 	@Column(precision = 12, scale = 2)
 	@NotNull
-	@DecimalMin("0.1")
+	@DecimalMin("1.0")
 	private Double valorMensal;
 
 	@Column(updatable = false)

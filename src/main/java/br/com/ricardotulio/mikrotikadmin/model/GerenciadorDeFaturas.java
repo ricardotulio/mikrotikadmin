@@ -4,31 +4,55 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@Component
+import br.com.ricardotulio.mikrotikadmin.dao.ClienteDao;
+import br.com.ricardotulio.mikrotikadmin.dao.FaturaDao;
+
+@Service
 public class GerenciadorDeFaturas {
 
-	public static final int NUMERO_DIAS_ANTECEDENCIA_GERACAO_FATURA = 10;
+	private ClienteDao clienteDao;
+	private FaturaDao faturaDao;
+	private GeradorDeFatura geradorDeFatura;
 
-	public void geraProximasFaturas(List<Cliente> clientes, Calendar dataFaturamentoTermino, Calendar dataVencimento, List<AcaoAposGerarFaturas> acoesAposGerarFatura) {		
+	@Autowired
+	public GerenciadorDeFaturas(ClienteDao clienteDao, FaturaDao faturaDao, GeradorDeFatura geradorDeFatura) {
+		this.clienteDao = clienteDao;
+		this.faturaDao = faturaDao;
+		this.geradorDeFatura = geradorDeFatura;
+	}
+
+	public List<Fatura> geraProximasFaturas() {
+		Calendar dataVencimentoPrevisto = Calendar.getInstance();
+		dataVencimentoPrevisto.add(Calendar.DATE, DataVencimento.NUMERO_DIAS_ANTECEDENCIA_VECTO_FATURA);
+		List<Cliente> clientes = this.clienteDao
+				.obtemListaAtivosComVencimentoNoDia(dataVencimentoPrevisto.get(Calendar.DAY_OF_MONTH));
 		List<Fatura> faturas = new ArrayList<Fatura>();
-		
-		for(Cliente cliente : clientes) {
-			Calendar dataFaturamentoInicio = cliente.getDataFaturamentoInicioProximaFatura();
-			PeriodoFaturamento periodoFaturamento = new PeriodoFaturamento(dataFaturamentoInicio, dataFaturamentoTermino);
-			Fatura fatura = new Fatura();
-			fatura.setCliente(cliente);
-			fatura.setPeriodoFaturamento(periodoFaturamento);
-			fatura.setDataVencimento(dataVencimento);
-			fatura.calculaValor();
-					
-			faturas.add(fatura);
+
+		List<AcaoAposGerarFatura> acoesAposGerarFatura = new ArrayList<AcaoAposGerarFatura>();
+		AcaoAposGerarFatura gerarFaturaPagSeguro = new GerarFaturaPagSeguro();
+		AcaoAposGerarFatura gravaFaturaNoBanco = new GravaFaturaNoBanco(this.faturaDao);
+		AcaoAposGerarFatura enviarFaturaPorEmail = new EnviarFaturaPorEmail();
+
+		acoesAposGerarFatura.add(gerarFaturaPagSeguro);
+		acoesAposGerarFatura.add(gravaFaturaNoBanco);
+		acoesAposGerarFatura.add(enviarFaturaPorEmail);
+
+		for (Cliente cliente : clientes) {
+			Fatura fatura = this.geradorDeFatura.geraFatura(cliente);
+
+			if (fatura.deveSerLancada()) {
+				for (AcaoAposGerarFatura acao : acoesAposGerarFatura) {
+					acao.executa(fatura);
+				}
+
+				faturas.add(fatura);
+			}
 		}
-		
-		for(AcaoAposGerarFaturas acao : acoesAposGerarFatura) {
-			acao.executa(faturas);
-		}
+
+		return faturas;
 	}
 
 }
