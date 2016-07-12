@@ -39,13 +39,13 @@ public class Endereco {
 
 	@Column
 	@NotNull
-	@Size(max = 60)
+	@Size(min = 5, max = 60)
 	private String cidade;
 
 	@Column
 	@Size(min = 2, max = 2)
 	private String uf;
-	
+
 	@Column
 	@NotNull
 	private String cep;

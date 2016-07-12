@@ -227,8 +227,12 @@
 <!-- Parsley.js - Validação de formulário -->
 <script src="<c:url value="/assets/plugins/parsley/parsley.min.js" />"></script>
 <script src="<c:url value="/assets/plugins/parsley/parsley/remote.js" />"></script>
+<script src="<c:url value="/assets/plugins/parsley/parsley-login-duplicado.js" />"></script>
 <script src="<c:url value="/assets/plugins/parsley/parsley-cpf.js" />"></script>
-<script src="<c:url value="/assets/plugins/parsley/parsley-titulo-plano.js" />"></script>
+<script src="<c:url value="/assets/plugins/parsley/parsley-cpf-duplicado.js" />"></script>
+<script src="<c:url value="/assets/plugins/parsley/parsley-cep.js" />"></script>
+<script src="<c:url value="/assets/plugins/parsley/parsley-telefone.js" />"></script>
+<script src="<c:url value="/assets/plugins/parsley/parsley-titulo-plano-duplicado.js" />"></script>
 <script src="<c:url value="/assets/plugins/parsley/i18n/pt-br.js" />"></script>
 
 <!-- Script da página de planos -->

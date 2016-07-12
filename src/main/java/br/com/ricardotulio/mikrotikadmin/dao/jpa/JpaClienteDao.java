@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
@@ -42,6 +43,28 @@ public class JpaClienteDao implements ClienteDao {
 				.createQuery("SELECT c FROM Cliente c WHERE c.ativo = true AND diaParaPagamentos = " + dia,
 						Cliente.class)
 				.getResultList();
+	}
+
+	public Cliente obtemClientePorLogin(String login) {
+		Query query = this.entityManager.createQuery("SELECT c FROM Cliente c WHERE c.login = ?", Cliente.class);
+		query.setParameter(1, login);
+
+		List<Cliente> resultado = query.getResultList();
+
+		if (resultado.size() > 0)
+			return resultado.get(0);
+		return null;
+	}
+
+	public Cliente obtemClientePorCpf(String cpf) {
+		Query query = this.entityManager.createQuery("SELECT c FROM Cliente c WHERE c.cpf = ?", Cliente.class);
+		query.setParameter(1, cpf);
+
+		List<Cliente> resultado = query.getResultList();
+
+		if (resultado.size() > 0)
+			return resultado.get(0);
+		return null;
 	}
 
 }

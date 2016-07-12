@@ -40,7 +40,7 @@ public class Cliente {
 	@Size(min = 3, max = 120)
 	private String nome;
 
-	@Column(unique = true)
+	@Column
 	@NotNull
 	@CPF
 	private String cpf;
@@ -61,7 +61,7 @@ public class Cliente {
 	@Max(31)
 	private Integer diaParaPagamentos;
 
-	@Column(unique = true)
+	@Column
 	@NotNull
 	@Size(min = 6, max = 20)
 	private String login;
@@ -195,6 +195,11 @@ public class Cliente {
 	public void adicionaEndereco(Endereco endereco) {
 		endereco.setCliente(this);
 		this.enderecos.add(endereco);
+	}
+
+	public void removeEndereco(Endereco endereco) {
+		endereco.setCliente(null);
+		this.enderecos.remove(endereco);
 	}
 
 	public void setFaturas(Collection<Fatura> faturas) {

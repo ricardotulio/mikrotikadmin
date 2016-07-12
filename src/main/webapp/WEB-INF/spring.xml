@@ -21,8 +21,7 @@
 
 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url"
-			value="jdbc:mysql://localhost/mikrotikadmin?characterEncoding=utf-8" />
+		<property name="url" value="jdbc:mysql://localhost/mikrotikadmin?useUnicode=yes&amp;characterEncoding=UTF-8" />
 		<property name="username" value="root" />
 		<property name="password" value="123456" />
 	</bean>

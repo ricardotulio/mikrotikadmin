@@ -16,4 +16,8 @@ public interface ClienteDao {
 
 	public List<Cliente> obtemListaAtivosComVencimentoNoDia(Integer dia);
 
+	public Cliente obtemClientePorLogin(String login);
+
+	public Cliente obtemClientePorCpf(String cpf);
+
 }

@@ -2,3 +2,4 @@
 .project
 .settings
 .vagrant
+src/test/*.png

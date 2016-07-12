@@ -20,11 +20,6 @@
 
 <!-- Main content -->
 <section class="content">
-	<div class="row">
-				<c:import url="/WEB-INF/views/clientes/formulario.jsp" />
-				</form>
-			</div>
-		</div>
-	</div>
+	<c:import url="/WEB-INF/views/clientes/formulario.jsp" />
 </section>
 <c:import url="/WEB-INF/views/template/footer.jsp" />

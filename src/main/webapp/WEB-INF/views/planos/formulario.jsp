@@ -17,7 +17,7 @@
 							placeholder="Digite o título" value="${plano.titulo}"
 							required="required"
 							<c:if test="${not empty plano}">readonly</c:if>
-							<c:if test="${empty plano}">data-parsley-minlength="5" data-parsley-maxlength="30" data-parsley-remote="buscaPorTitulo/{value}" data-parsley-trigger="focusout" data-parsley-remote-reverse data-parsley-remote-validator="titulo-plano" data-parsley-remote-options='{"type": "GET", "dataType": "json", "token": "value"}' data-parsley-remote-message="Já existe um plano com este título. Por favor, informe outro título."</c:if>>
+							<c:if test="${empty plano}">data-parsley-minlength="5" data-parsley-maxlength="30" data-parsley-remote="buscaPorTitulo/{value}" data-parsley-trigger="focusout" data-parsley-remote-reverse data-parsley-remote-validator="titulo-plano-duplicado" data-parsley-remote-options='{"type": "GET", "dataType": "json", "token": "value"}' data-parsley-remote-message="Já existe um plano com este título. Por favor, informe outro título."</c:if>>
 					</div>
 					<div class="form-group">
 						<label for="descricao">Descrição: </label>
