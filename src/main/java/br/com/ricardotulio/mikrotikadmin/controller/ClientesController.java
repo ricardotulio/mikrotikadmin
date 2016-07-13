@@ -148,8 +148,8 @@ public class ClientesController {
 
 	@RequestMapping(value = "/clientes/editar/{id}", method = RequestMethod.POST)
 	@Transactional
-	public String editarPost(@PathVariable("id") Long id, Cliente cliente, Endereco endereco, Contato contato, @RequestParam("planoId") Long planoId,
-			final RedirectAttributes redirectAttributes) {
+	public String editarPost(@PathVariable("id") Long id, Cliente cliente, Endereco endereco, Contato contato,
+			@RequestParam("planoId") Long planoId, final RedirectAttributes redirectAttributes) {
 		Cliente clienteExiste = this.clienteDao.obtem(id);
 
 		if (clienteExiste == null) {
@@ -161,10 +161,15 @@ public class ClientesController {
 		}
 
 		cliente.setId(id);
-		
+
+		Long enderecoId = clienteExiste.getEnderecos().iterator().next().getId();
+		endereco.setId(enderecoId);
 		cliente.adicionaEndereco(endereco);
+
+		Long contatoId = clienteExiste.getContatos().iterator().next().getId();
+		contato.setId(contatoId);
 		cliente.adicionaContato(contato);
-		
+
 		cliente.setPlano(this.planoDao.obtem(planoId));
 		this.clienteDao.persiste(cliente);
 

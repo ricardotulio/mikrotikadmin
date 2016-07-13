@@ -13,6 +13,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import br.com.ricardotulio.mikrotikadmin.model.Cliente;
@@ -20,7 +21,7 @@ import br.com.ricardotulio.mikrotikadmin.model.Contato;
 import br.com.ricardotulio.mikrotikadmin.model.Endereco;
 
 @RunWith(Parameterized.class)
-public class CadastrarClientesTest extends AceitacaoTest {
+public class CadastraClientesTest extends AceitacaoTest {
 
 	private Cliente cliente;
 	private String urlEsperadaAposSubmeterFormulario;
@@ -28,7 +29,7 @@ public class CadastrarClientesTest extends AceitacaoTest {
 	private String campoInvalido;
 	private String mensagemEsperadaRetorno;
 
-	public CadastrarClientesTest(Cliente cliente, String urlEsperadaAposSubmeterFormulario, boolean ehUmClienteValido,
+	public CadastraClientesTest(Cliente cliente, String urlEsperadaAposSubmeterFormulario, boolean ehUmClienteValido,
 			String campoInvalido, String mensagemEsperadaRetorno) {
 		this.cliente = cliente;
 		this.urlEsperadaAposSubmeterFormulario = baseUrl + urlEsperadaAposSubmeterFormulario;
@@ -69,15 +70,15 @@ public class CadastrarClientesTest extends AceitacaoTest {
 		clienteComLoginDuplicado.setRg(copia1.getRg());
 		clienteComLoginDuplicado.setDataContrato(copia1.getDataContrato());
 		clienteComLoginDuplicado.setDiaParaPagamentos(copia1.getDiaParaPagamentos());
-		clienteComLoginDuplicado.setEndereco(copia1.getEnderecos().iterator().next());
+		clienteComLoginDuplicado.adicionaEndereco(copia1.getEnderecos().iterator().next());
 		clienteComLoginDuplicado.adicionaContato(copia1.getContatos().iterator().next());
-		
+
 		parametros[contadorParametros][0] = clienteComLoginDuplicado;
 		parametros[contadorParametros][1] = "clientes/cadastrar";
 		parametros[contadorParametros][2] = false;
 		parametros[contadorParametros][3] = "login";
 		parametros[contadorParametros][4] = "Já existe um cliente com este login.";
-		contadorParametros++;		
+		contadorParametros++;
 
 		Cliente copia2 = (Cliente) parametros[contadorParametros - 2][0];
 		Cliente clienteComCpfDuplicado = new Cliente();
@@ -88,15 +89,15 @@ public class CadastrarClientesTest extends AceitacaoTest {
 		clienteComCpfDuplicado.setRg(copia2.getRg());
 		clienteComCpfDuplicado.setDataContrato(copia2.getDataContrato());
 		clienteComCpfDuplicado.setDiaParaPagamentos(copia2.getDiaParaPagamentos());
-		clienteComCpfDuplicado.setEndereco(copia2.getEnderecos().iterator().next());
-		clienteComCpfDuplicado.adicionaContato(copia2.getContatos().iterator().next());		
-		
+		clienteComCpfDuplicado.adicionaEndereco(copia2.getEnderecos().iterator().next());
+		clienteComCpfDuplicado.adicionaContato(copia2.getContatos().iterator().next());
+
 		parametros[contadorParametros][0] = clienteComCpfDuplicado;
 		parametros[contadorParametros][1] = "clientes/cadastrar";
 		parametros[contadorParametros][2] = false;
 		parametros[contadorParametros][3] = "cpf";
 		parametros[contadorParametros][4] = "Já existe um cliente com este CPF.";
-		contadorParametros++;	
+		contadorParametros++;
 
 		Iterator<Object[]> iteratorClientesInvalidos = clientesInvalidos.iterator();
 
@@ -125,8 +126,14 @@ public class CadastrarClientesTest extends AceitacaoTest {
 
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
 
-		driver.findElement(By.name("nome")).sendKeys(this.cliente.getNome());
-		driver.findElement(By.name("cpf")).sendKeys(this.cliente.getCpf());
+		WebElement nome = driver.findElement(By.name("nome"));
+		nome.clear();
+		nome.sendKeys(this.cliente.getNome());
+
+		WebElement cpf = driver.findElement(By.name("cpf"));
+		cpf.clear();
+		cpf.sendKeys(this.cliente.getCpf());
+		
 		driver.findElement(By.name("rg")).sendKeys(this.cliente.getRg());
 
 		if (this.cliente.getDataContrato() != null) {

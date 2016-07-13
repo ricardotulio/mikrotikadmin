@@ -18,7 +18,7 @@ import org.openqa.selenium.WebElement;
 import br.com.ricardotulio.mikrotikadmin.model.Plano;
 
 @RunWith(Parameterized.class)
-public class AtualizaPlanosTest extends AceitacaoTest {
+public class EditaPlanosTest extends AceitacaoTest {
 
 	private Plano plano;
 	private String urlEsperadaAposSubmeterFormulario;
@@ -26,7 +26,7 @@ public class AtualizaPlanosTest extends AceitacaoTest {
 	private boolean ehUmPlanoValido;
 	private String campoInvalido;
 
-	public AtualizaPlanosTest(Plano plano, String urlEsperadaAposSubmeterFormulario, boolean ehUmPlanoValido,
+	public EditaPlanosTest(Plano plano, String urlEsperadaAposSubmeterFormulario, boolean ehUmPlanoValido,
 			String campoInvalido, String mensagemEsperadaRetorno) {
 		this.plano = plano;
 		this.urlEsperadaAposSubmeterFormulario = baseUrl + urlEsperadaAposSubmeterFormulario;

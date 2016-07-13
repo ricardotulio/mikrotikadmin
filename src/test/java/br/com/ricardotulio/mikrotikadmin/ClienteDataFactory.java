@@ -35,7 +35,7 @@ public class ClienteDataFactory {
 		clienteValido1.setDiaParaPagamentos(5);
 		clienteValido1.setLogin("ricardo948");
 		clienteValido1.setSenha("gf155c44");
-		clienteValido1.setEndereco(endereco);
+		clienteValido1.adicionaEndereco(endereco);
 		clienteValido1.adicionaContato(contato);
 		clientesValidos[0][0] = clienteValido1;
 		
@@ -48,7 +48,7 @@ public class ClienteDataFactory {
 		clienteValido2.setDiaParaPagamentos(5);
 		clienteValido2.setLogin("ricardokdi");
 		clienteValido2.setSenha("gf155c44");
-		clienteValido2.setEndereco(endereco);
+		clienteValido2.adicionaEndereco(endereco);
 		clienteValido2.adicionaContato(contato);
 		clientesValidos[1][0] = clienteValido2;
 		
@@ -61,7 +61,7 @@ public class ClienteDataFactory {
 		clienteValido3.setDiaParaPagamentos(1);
 		clienteValido3.setLogin("ricardoafa");
 		clienteValido3.setSenha("gf155c44");
-		clienteValido3.setEndereco(endereco);
+		clienteValido3.adicionaEndereco(endereco);
 		clienteValido3.adicionaContato(contato);
 		clientesValidos[2][0] = clienteValido3;
 		
@@ -74,7 +74,7 @@ public class ClienteDataFactory {
 		clienteValido4.setDiaParaPagamentos(28);
 		clienteValido4.setLogin("ricaddd");
 		clienteValido4.setSenha("gf155c44");
-		clienteValido4.setEndereco(endereco);
+		clienteValido4.adicionaEndereco(endereco);
 		clienteValido4.adicionaContato(contato);
 		clientesValidos[3][0] = clienteValido4;	
 		
@@ -87,7 +87,7 @@ public class ClienteDataFactory {
 		clienteValido5.setDiaParaPagamentos(28);
 		clienteValido5.setLogin("ricard");
 		clienteValido5.setSenha("gf155c44");
-		clienteValido5.setEndereco(endereco);
+		clienteValido5.adicionaEndereco(endereco);
 		clienteValido5.adicionaContato(contato);
 		clientesValidos[4][0] = clienteValido5;		
 		
@@ -100,7 +100,7 @@ public class ClienteDataFactory {
 		clienteValido6.setDiaParaPagamentos(28);
 		clienteValido6.setLogin("ricardoledodetulioak");
 		clienteValido6.setSenha("gf155c44");
-		clienteValido6.setEndereco(endereco);
+		clienteValido6.adicionaEndereco(endereco);
 		clienteValido6.adicionaContato(contato);
 		clientesValidos[5][0] = clienteValido6;		
 
@@ -113,7 +113,7 @@ public class ClienteDataFactory {
 		clienteValido7.setDiaParaPagamentos(28);
 		clienteValido7.setLogin("ricardoabcdef");
 		clienteValido7.setSenha("gf155c");
-		clienteValido7.setEndereco(endereco);
+		clienteValido7.adicionaEndereco(endereco);
 		clienteValido7.adicionaContato(contato);
 		clientesValidos[6][0] = clienteValido7;		
 
@@ -126,7 +126,7 @@ public class ClienteDataFactory {
 		clienteValido8.setDiaParaPagamentos(28);
 		clienteValido8.setLogin("ricardoumdois");
 		clienteValido8.setSenha("gf15324fasdfadfasdfd");
-		clienteValido8.setEndereco(endereco);
+		clienteValido8.adicionaEndereco(endereco);
 		clienteValido8.adicionaContato(contato);
 		clientesValidos[7][0] = clienteValido8;
 		
@@ -148,7 +148,7 @@ public class ClienteDataFactory {
 		enderecoValido1.setUf("sp");
 		enderecoValido1.setCep("04235-025");
 		
-		clienteValido9.setEndereco(enderecoValido1);
+		clienteValido9.adicionaEndereco(enderecoValido1);
 		clienteValido9.adicionaContato(contato);
 		clientesValidos[8][0] = clienteValido9;				
 		
@@ -170,7 +170,7 @@ public class ClienteDataFactory {
 		enderecoValido2.setUf("sp");
 		enderecoValido2.setCep("04235-025");
 		
-		clienteValido10.setEndereco(enderecoValido2);
+		clienteValido10.adicionaEndereco(enderecoValido2);
 		clienteValido10.adicionaContato(contato);
 		clientesValidos[9][0] = clienteValido10;				
 		
@@ -202,7 +202,7 @@ public class ClienteDataFactory {
 		clienteInvalido1.setDiaParaPagamentos(5);
 		clienteInvalido1.setLogin("ricardoledo");
 		clienteInvalido1.setSenha("gf155c44");
-		clienteInvalido1.setEndereco(endereco);
+		clienteInvalido1.adicionaEndereco(endereco);
 		clienteInvalido1.adicionaContato(contato);
 		clientesInvalidos[0][0] = clienteInvalido1;
 		clientesInvalidos[0][1] = "nome";
@@ -217,7 +217,7 @@ public class ClienteDataFactory {
 		clienteInvalido2.setDiaParaPagamentos(5);
 		clienteInvalido2.setLogin("ricardoledo");
 		clienteInvalido2.setSenha("gf155c44");
-		clienteInvalido2.setEndereco(endereco);
+		clienteInvalido2.adicionaEndereco(endereco);
 		clienteInvalido2.adicionaContato(contato);
 		clientesInvalidos[1][0] = clienteInvalido2;
 		clientesInvalidos[1][1] = "nome";
@@ -233,7 +233,7 @@ public class ClienteDataFactory {
 		clienteInvalido3.setDiaParaPagamentos(5);
 		clienteInvalido3.setLogin("ricardoledo");
 		clienteInvalido3.setSenha("gf155c44");
-		clienteInvalido3.setEndereco(endereco);
+		clienteInvalido3.adicionaEndereco(endereco);
 		clienteInvalido3.adicionaContato(contato);
 		clientesInvalidos[2][0] = clienteInvalido3;
 		clientesInvalidos[2][1] = "nome";
@@ -248,7 +248,7 @@ public class ClienteDataFactory {
 		clienteInvalido4.setDiaParaPagamentos(5);
 		clienteInvalido4.setLogin("ricardoledo");
 		clienteInvalido4.setSenha("gf155c44");
-		clienteInvalido4.setEndereco(endereco);
+		clienteInvalido4.adicionaEndereco(endereco);
 		clienteInvalido4.adicionaContato(contato);
 		clientesInvalidos[3][0] = clienteInvalido4;
 		clientesInvalidos[3][1] = "cpf";
@@ -263,7 +263,7 @@ public class ClienteDataFactory {
 		clienteInvalido5.setDiaParaPagamentos(5);
 		clienteInvalido5.setLogin("ricardoledo");
 		clienteInvalido5.setSenha("gf155c44");
-		clienteInvalido5.setEndereco(endereco);
+		clienteInvalido5.adicionaEndereco(endereco);
 		clienteInvalido5.adicionaContato(contato);
 		clientesInvalidos[4][0] = clienteInvalido5;
 		clientesInvalidos[4][1] = "cpf";
@@ -278,7 +278,7 @@ public class ClienteDataFactory {
 		clienteInvalido6.setDiaParaPagamentos(5);
 		clienteInvalido6.setLogin("ricardoledo");
 		clienteInvalido6.setSenha("gf155c44");
-		clienteInvalido6.setEndereco(endereco);
+		clienteInvalido6.adicionaEndereco(endereco);
 		clienteInvalido6.adicionaContato(contato);
 		clientesInvalidos[5][0] = clienteInvalido6;
 		clientesInvalidos[5][1] = "rg";
@@ -292,7 +292,7 @@ public class ClienteDataFactory {
 		clienteInvalido7.setDiaParaPagamentos(5);
 		clienteInvalido7.setLogin("ricardoledo");
 		clienteInvalido7.setSenha("gf155c44");
-		clienteInvalido7.setEndereco(endereco);
+		clienteInvalido7.adicionaEndereco(endereco);
 		clienteInvalido7.adicionaContato(contato);
 		clientesInvalidos[6][0] = clienteInvalido7;
 		clientesInvalidos[6][1] = "dataContrato";
@@ -306,7 +306,7 @@ public class ClienteDataFactory {
 		clienteInvalido8.setDataContrato(Calendar.getInstance());
 		clienteInvalido8.setLogin("ricardoledo");
 		clienteInvalido8.setSenha("gf155c44");
-		clienteInvalido8.setEndereco(endereco);
+		clienteInvalido8.adicionaEndereco(endereco);
 		clienteInvalido8.adicionaContato(contato);
 		clientesInvalidos[7][0] = clienteInvalido8;
 		clientesInvalidos[7][1] = "diaParaPagamentos";
@@ -321,7 +321,7 @@ public class ClienteDataFactory {
 		clienteInvalido9.setDiaParaPagamentos(0);
 		clienteInvalido9.setLogin("ricardoledo");
 		clienteInvalido9.setSenha("gf155c44");
-		clienteInvalido9.setEndereco(endereco);
+		clienteInvalido9.adicionaEndereco(endereco);
 		clienteInvalido9.adicionaContato(contato);
 		clientesInvalidos[8][0] = clienteInvalido9;
 		clientesInvalidos[8][1] = "diaParaPagamentos";
@@ -336,7 +336,7 @@ public class ClienteDataFactory {
 		clienteInvalido10.setDiaParaPagamentos(29);
 		clienteInvalido10.setLogin("ricardoledo");
 		clienteInvalido10.setSenha("gf155c44");
-		clienteInvalido10.setEndereco(endereco);
+		clienteInvalido10.adicionaEndereco(endereco);
 		clienteInvalido10.adicionaContato(contato);
 		clientesInvalidos[9][0] = clienteInvalido10;
 		clientesInvalidos[9][1] = "diaParaPagamentos";
@@ -351,7 +351,7 @@ public class ClienteDataFactory {
 		clienteInvalido11.setDiaParaPagamentos(26);
 		clienteInvalido11.setLogin("");
 		clienteInvalido11.setSenha("gf155c44");
-		clienteInvalido11.setEndereco(endereco);
+		clienteInvalido11.adicionaEndereco(endereco);
 		clienteInvalido11.adicionaContato(contato);
 		clientesInvalidos[10][0] = clienteInvalido11;
 		clientesInvalidos[10][1] = "login";
@@ -366,7 +366,7 @@ public class ClienteDataFactory {
 		clienteInvalido12.setDiaParaPagamentos(26);
 		clienteInvalido12.setLogin("ricar");
 		clienteInvalido12.setSenha("gf155c44");
-		clienteInvalido12.setEndereco(endereco);
+		clienteInvalido12.adicionaEndereco(endereco);
 		clienteInvalido12.adicionaContato(contato);
 		clientesInvalidos[11][0] = clienteInvalido12;
 		clientesInvalidos[11][1] = "login";
@@ -381,7 +381,7 @@ public class ClienteDataFactory {
 		clienteInvalido13.setDiaParaPagamentos(26);
 		clienteInvalido13.setLogin("ricardoledodetuliooli");
 		clienteInvalido13.setSenha("gf155c44");
-		clienteInvalido13.setEndereco(endereco);
+		clienteInvalido13.adicionaEndereco(endereco);
 		clienteInvalido13.adicionaContato(contato);
 		clientesInvalidos[12][0] = clienteInvalido13;
 		clientesInvalidos[12][1] = "login";
@@ -396,7 +396,7 @@ public class ClienteDataFactory {
 		clienteInvalido14.setDiaParaPagamentos(26);
 		clienteInvalido14.setLogin("ricardoledo");
 		clienteInvalido14.setSenha("");
-		clienteInvalido14.setEndereco(endereco);
+		clienteInvalido14.adicionaEndereco(endereco);
 		clienteInvalido14.adicionaContato(contato);
 		clientesInvalidos[13][0] = clienteInvalido14;
 		clientesInvalidos[13][1] = "senha";
@@ -411,7 +411,7 @@ public class ClienteDataFactory {
 		clienteInvalido15.setDiaParaPagamentos(26);
 		clienteInvalido15.setLogin("ricardoledo");
 		clienteInvalido15.setSenha("gf155");
-		clienteInvalido15.setEndereco(endereco);
+		clienteInvalido15.adicionaEndereco(endereco);
 		clienteInvalido15.adicionaContato(contato);
 		clientesInvalidos[14][0] = clienteInvalido15;
 		clientesInvalidos[14][1] = "senha";
@@ -426,7 +426,7 @@ public class ClienteDataFactory {
 		clienteInvalido16.setDiaParaPagamentos(26);
 		clienteInvalido16.setLogin("ricardoledo");
 		clienteInvalido16.setSenha("gf155c44fgdifkadfifkd");
-		clienteInvalido16.setEndereco(endereco);
+		clienteInvalido16.adicionaEndereco(endereco);
 		clienteInvalido16.adicionaContato(contato);
 		clientesInvalidos[15][0] = clienteInvalido16;
 		clientesInvalidos[15][1] = "senha";
@@ -450,7 +450,7 @@ public class ClienteDataFactory {
 		enderecoInvalido1.setUf("sp");
 		enderecoInvalido1.setCep("04235-025");
 
-		clienteInvalido17.setEndereco(enderecoInvalido1);
+		clienteInvalido17.adicionaEndereco(enderecoInvalido1);
 		clienteInvalido17.adicionaContato(contato);
 		clientesInvalidos[16][0] = clienteInvalido17;
 		clientesInvalidos[16][1] = "logradouro";
@@ -474,7 +474,7 @@ public class ClienteDataFactory {
 		enderecoInvalido2.setUf("sp");
 		enderecoInvalido2.setCep("04235-025");
 
-		clienteInvalido18.setEndereco(enderecoInvalido2);
+		clienteInvalido18.adicionaEndereco(enderecoInvalido2);
 		clienteInvalido18.adicionaContato(contato);
 		clientesInvalidos[17][0] = clienteInvalido18;
 		clientesInvalidos[17][1] = "logradouro";
@@ -499,7 +499,7 @@ public class ClienteDataFactory {
 		enderecoInvalido3.setUf("sp");
 		enderecoInvalido3.setCep("04235-025");
 
-		clienteInvalido19.setEndereco(enderecoInvalido3);
+		clienteInvalido19.adicionaEndereco(enderecoInvalido3);
 		clienteInvalido19.adicionaContato(contato);
 		clientesInvalidos[18][0] = clienteInvalido19;
 		clientesInvalidos[18][1] = "logradouro";
@@ -522,7 +522,7 @@ public class ClienteDataFactory {
 		enderecoInvalido4.setUf("sp");
 		enderecoInvalido4.setCep("04235-025");
 
-		clienteInvalido20.setEndereco(enderecoInvalido4);
+		clienteInvalido20.adicionaEndereco(enderecoInvalido4);
 		clienteInvalido20.adicionaContato(contato);
 		clientesInvalidos[19][0] = clienteInvalido20;
 		clientesInvalidos[19][1] = "numero";
@@ -547,7 +547,7 @@ public class ClienteDataFactory {
 		enderecoInvalido5.setUf("sp");
 		enderecoInvalido5.setCep("04235-025");
 
-		clienteInvalido21.setEndereco(enderecoInvalido5);
+		clienteInvalido21.adicionaEndereco(enderecoInvalido5);
 		clienteInvalido21.adicionaContato(contato);
 		clientesInvalidos[20][0] = clienteInvalido21;
 		clientesInvalidos[20][1] = "complemento";
@@ -572,7 +572,7 @@ public class ClienteDataFactory {
 		enderecoInvalido6.setUf("sp");
 		enderecoInvalido6.setCep("04235-025");
 
-		clienteInvalido22.setEndereco(enderecoInvalido6);
+		clienteInvalido22.adicionaEndereco(enderecoInvalido6);
 		clienteInvalido22.adicionaContato(contato);
 		clientesInvalidos[21][0] = clienteInvalido22;
 		clientesInvalidos[21][1] = "bairro";
@@ -597,7 +597,7 @@ public class ClienteDataFactory {
 		enderecoInvalido7.setUf("sp");
 		enderecoInvalido7.setCep("04235-025");
 
-		clienteInvalido23.setEndereco(enderecoInvalido7);
+		clienteInvalido23.adicionaEndereco(enderecoInvalido7);
 		clienteInvalido23.adicionaContato(contato);
 		clientesInvalidos[22][0] = clienteInvalido23;
 		clientesInvalidos[22][1] = "bairro";
@@ -622,7 +622,7 @@ public class ClienteDataFactory {
 		enderecoInvalido8.setUf("sp");
 		enderecoInvalido8.setCep("04235-025");
 
-		clienteInvalido24.setEndereco(enderecoInvalido8);
+		clienteInvalido24.adicionaEndereco(enderecoInvalido8);
 		clienteInvalido24.adicionaContato(contato);
 		clientesInvalidos[23][0] = clienteInvalido24;
 		clientesInvalidos[23][1] = "bairro";
@@ -647,7 +647,7 @@ public class ClienteDataFactory {
 		enderecoInvalido9.setUf("sp");
 		enderecoInvalido9.setCep("04235-025");
 
-		clienteInvalido25.setEndereco(enderecoInvalido9);
+		clienteInvalido25.adicionaEndereco(enderecoInvalido9);
 		clienteInvalido25.adicionaContato(contato);
 		clientesInvalidos[24][0] = clienteInvalido25;
 		clientesInvalidos[24][1] = "cidade";
@@ -672,7 +672,7 @@ public class ClienteDataFactory {
 		enderecoInvalido10.setUf("sp");
 		enderecoInvalido10.setCep("04235-025");
 
-		clienteInvalido26.setEndereco(enderecoInvalido10);
+		clienteInvalido26.adicionaEndereco(enderecoInvalido10);
 		clienteInvalido26.adicionaContato(contato);
 		clientesInvalidos[25][0] = clienteInvalido26;
 		clientesInvalidos[25][1] = "cidade";
@@ -697,7 +697,7 @@ public class ClienteDataFactory {
 		enderecoInvalido11.setUf("sp");
 		enderecoInvalido11.setCep("04235-025");
 
-		clienteInvalido27.setEndereco(enderecoInvalido11);
+		clienteInvalido27.adicionaEndereco(enderecoInvalido11);
 		clienteInvalido27.adicionaContato(contato);
 		clientesInvalidos[26][0] = clienteInvalido27;
 		clientesInvalidos[26][1] = "cidade";
@@ -722,7 +722,7 @@ public class ClienteDataFactory {
 		enderecoInvalido12.setUf("sp");
 		enderecoInvalido12.setCep("");
 
-		clienteInvalido28.setEndereco(enderecoInvalido12);
+		clienteInvalido28.adicionaEndereco(enderecoInvalido12);
 		clienteInvalido28.adicionaContato(contato);
 		clientesInvalidos[27][0] = clienteInvalido28;
 		clientesInvalidos[27][1] = "cep";
@@ -747,7 +747,7 @@ public class ClienteDataFactory {
 		enderecoInvalido13.setUf("sp");
 		enderecoInvalido13.setCep("013456");
 
-		clienteInvalido29.setEndereco(enderecoInvalido13);
+		clienteInvalido29.adicionaEndereco(enderecoInvalido13);
 		clienteInvalido29.adicionaContato(contato);
 		clientesInvalidos[28][0] = clienteInvalido29;
 		clientesInvalidos[28][1] = "cep";
@@ -768,7 +768,7 @@ public class ClienteDataFactory {
 		contatoInvalido1.setCelular("(11) 95419-3524");
 		contatoInvalido1.setEmail("ricardo.tulio@fatec.sp.gov.br");
 
-		clienteInvalido30.setEndereco(endereco);
+		clienteInvalido30.adicionaEndereco(endereco);
 		clienteInvalido30.adicionaContato(contatoInvalido1);
 		clientesInvalidos[29][0] = clienteInvalido30;
 		clientesInvalidos[29][1] = "telefone";
@@ -790,7 +790,7 @@ public class ClienteDataFactory {
 		contatoInvalido2.setEmail("ricardo.tulio@fatec.sp.gov.br");
 		;
 
-		clienteInvalido31.setEndereco(endereco);
+		clienteInvalido31.adicionaEndereco(endereco);
 		clienteInvalido31.adicionaContato(contatoInvalido2);
 		clientesInvalidos[30][0] = clienteInvalido31;
 		clientesInvalidos[30][1] = "celular";
@@ -811,7 +811,7 @@ public class ClienteDataFactory {
 		contatoInvalido3.setCelular("(11) 95419-3524");
 		contatoInvalido3.setEmail("");
 
-		clienteInvalido32.setEndereco(endereco);
+		clienteInvalido32.adicionaEndereco(endereco);
 		clienteInvalido32.adicionaContato(contatoInvalido3);
 		clientesInvalidos[31][0] = clienteInvalido32;
 		clientesInvalidos[31][1] = "email";
@@ -832,7 +832,7 @@ public class ClienteDataFactory {
 		contatoInvalido4.setCelular("(11) 95419-3524");
 		contatoInvalido4.setEmail("ricarodleod@teste");
 
-		clienteInvalido33.setEndereco(endereco);
+		clienteInvalido33.adicionaEndereco(endereco);
 		clienteInvalido33.adicionaContato(contatoInvalido4);
 		clientesInvalidos[32][0] = clienteInvalido33;
 		clientesInvalidos[32][1] = "email";
@@ -856,7 +856,7 @@ public class ClienteDataFactory {
 		enderecoInvalido14.setCidade("São Paulo");
 		enderecoInvalido14.setCep("04235-025");
 
-		clienteInvalido34.setEndereco(enderecoInvalido14);
+		clienteInvalido34.adicionaEndereco(enderecoInvalido14);
 		clienteInvalido34.adicionaContato(contato);
 		clientesInvalidos[33][0] = clienteInvalido34;
 		clientesInvalidos[33][1] = "uf";

@@ -64,7 +64,7 @@
 										<c:choose>
 											<c:when test="${fn:length(clientes) gt 0}">
 												<c:forEach var="cliente" items="${clientes}">
-													<tr role="row" class="odd">
+													<tr role="row" class="odd" data-id="${cliente.id}">
 														<td><input type="checkbox" id="register-${cliente.id}"></td>
 														<td><fmt:formatNumber type="number" pattern="0000"
 																value="${cliente.id}" /></td>
@@ -76,7 +76,7 @@
 														<td>${cliente.ativo}</td>
 														<td><a
 															href="<c:url value="/clientes/editar/" />${cliente.id}"
-															title="Editar"><i class="fa fa-pencil"
+															title="Editar" class="btn-editar"><i class="fa fa-pencil"
 																aria-hidden="true"></i></a> <a href="javascript:void(0)"
 															id="btn-excluir-cliente" class="btn-excluir-cliente"
 															data-id="${cliente.id}" data-nome="${cliente.nome}" title="Excluir"><i
