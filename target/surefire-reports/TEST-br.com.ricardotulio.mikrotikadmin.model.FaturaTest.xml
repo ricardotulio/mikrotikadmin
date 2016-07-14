@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="200" failures="0" name="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" time="0.119" errors="0" skipped="0">
+<testsuite tests="200" failures="0" name="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" time="0.149" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/opt/jdk/jdk1.8.0_51/jre/lib/amd64"/>
@@ -61,45 +61,45 @@
   </properties>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[0]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[0]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[1]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[1]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[1]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[2]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[2]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[2]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[3]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[3]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[4]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[4]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[4]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[5]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[5]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[6]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[5]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[6]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[6]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[7]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[7]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[7]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[8]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[8]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[8]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[9]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[9]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[10]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[10]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[11]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[11]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[12]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[12]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[12]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[13]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[13]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[13]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[14]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[14]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[15]" time="0.023"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[15]" time="0.004"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[15]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[15]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[16]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[16]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[17]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[17]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[17]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[18]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[18]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[18]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[19]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[19]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[20]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[19]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[20]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[20]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[21]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[21]" time="0"/>
@@ -108,20 +108,20 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[23]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[23]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[24]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[24]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[24]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[25]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[25]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[26]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[26]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[26]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[27]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[27]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[28]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[28]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[29]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[29]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[29]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[29]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[30]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[30]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[31]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[31]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[31]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[32]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[32]" time="0"/>
@@ -129,19 +129,19 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[33]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[34]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[34]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[35]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[35]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[35]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[36]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[36]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[36]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[37]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[37]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[37]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[38]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[38]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[39]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[39]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[39]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[40]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[40]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[41]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[40]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[41]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[41]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[42]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[42]" time="0"/>
@@ -151,44 +151,44 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[44]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[45]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[45]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[46]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[46]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[46]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[47]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[47]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[47]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[47]" time="0.002"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[48]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[48]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[48]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[49]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[49]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[50]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[50]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[50]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[50]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[51]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[51]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[52]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[52]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[53]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[52]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[53]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[53]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[54]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[54]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[55]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[55]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[56]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[56]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[56]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[57]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[57]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[58]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[58]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[59]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[58]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[59]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[59]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[60]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[60]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[60]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[61]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[61]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[62]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[62]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[62]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[62]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[63]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[63]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[64]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[64]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[64]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[65]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[65]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[66]" time="0"/>
@@ -198,7 +198,7 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[68]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[68]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[69]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[69]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[69]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[70]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[70]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[71]" time="0"/>
@@ -206,21 +206,21 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[72]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[72]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[73]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[73]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[73]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[74]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[74]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[75]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[75]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[76]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[76]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[76]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[77]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[77]" time="0.005"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[78]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[77]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[78]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[78]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[79]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[79]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[80]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[80]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[80]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[81]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[81]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[82]" time="0"/>
@@ -232,13 +232,13 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[85]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[85]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[86]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[86]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[87]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[87]" time="0.003"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[86]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[87]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[87]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[88]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[88]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[89]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[89]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[89]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[90]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[90]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[91]" time="0"/>
@@ -253,10 +253,10 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[95]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[96]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[96]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[97]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[97]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[97]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[98]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[98]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[99]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[99]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeDeveLancarFaturaSeValorAbaixoDoMinimo[99]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.FaturaTest" name="testaSeCalculaFatura[99]" time="0.001"/>
 </testsuite>
