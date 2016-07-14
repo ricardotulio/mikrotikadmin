@@ -3,6 +3,7 @@
 .settings
 .vagrant
 *.class
+target/*.war
 **/*.war
 **/*.jar
 src/test/*.png
