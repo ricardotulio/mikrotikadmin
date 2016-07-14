@@ -96,6 +96,8 @@ public class Fatura {
 
 	public void setPeriodoFaturamento(PeriodoFaturamento periodoFaturamento) {
 		this.periodoFaturamento = periodoFaturamento;
+		this.dataFaturamentoInicio = periodoFaturamento.getDataFaturamentoInicio();
+		this.dataFaturamentoTermino = periodoFaturamento.getDataFaturamentoTermino();
 	}
 
 	public Calendar getDataFaturamentoInicio() {

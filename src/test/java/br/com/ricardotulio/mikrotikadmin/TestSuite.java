@@ -18,10 +18,7 @@ import br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest;
 	DataVencimentoTest.class,
 	FaturaTest.class,
 	GeradorDeFaturaTest.class,
-	GerenciadorDeFaturasTest.class,
-	CadastraPlanosTest.class,
-	EditaPlanosTest.class,
-	CadastraClientesTest.class
+	GerenciadorDeFaturasTest.class
 })
 public class TestSuite {
 

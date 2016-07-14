@@ -32,11 +32,11 @@ public class GerenciadorDeFaturas {
 		List<Fatura> faturas = new ArrayList<Fatura>();
 
 		List<AcaoAposGerarFatura> acoesAposGerarFatura = new ArrayList<AcaoAposGerarFatura>();
-		AcaoAposGerarFatura gerarFaturaPagSeguro = new GerarFaturaPagSeguro();
+//		AcaoAposGerarFatura gerarFaturaPagSeguro = new GerarFaturaPagSeguro();
 		AcaoAposGerarFatura gravaFaturaNoBanco = new GravaFaturaNoBanco(this.faturaDao);
 		AcaoAposGerarFatura enviarFaturaPorEmail = new EnviarFaturaPorEmail();
 
-		acoesAposGerarFatura.add(gerarFaturaPagSeguro);
+//		acoesAposGerarFatura.add(gerarFaturaPagSeguro);
 		acoesAposGerarFatura.add(gravaFaturaNoBanco);
 		acoesAposGerarFatura.add(enviarFaturaPorEmail);
 
