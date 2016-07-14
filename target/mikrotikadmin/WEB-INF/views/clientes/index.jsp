@@ -86,7 +86,7 @@
 											</c:when>
 											<c:otherwise>
 												<tr>
-													<td colspan="4">
+													<td colspan="9">
 														<h3>Não há nenhum cliente cadastrado.</h3>
 													</td>
 												</tr>

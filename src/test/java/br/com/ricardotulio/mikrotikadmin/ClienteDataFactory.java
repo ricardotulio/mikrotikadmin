@@ -854,13 +854,13 @@ public class ClienteDataFactory {
 		enderecoInvalido14.setComplemento("Casa D");
 		enderecoInvalido14.setBairro("Vila Isolina Mazzei");
 		enderecoInvalido14.setCidade("São Paulo");
-		enderecoInvalido14.setCep("04235-025");
+		enderecoInvalido14.setCep("fadfadsf");
 
 		clienteInvalido34.adicionaEndereco(enderecoInvalido14);
 		clienteInvalido34.adicionaContato(contato);
 		clientesInvalidos[33][0] = clienteInvalido34;
 		clientesInvalidos[33][1] = "uf";
-		clientesInvalidos[33][2] = "Este campo é obrigatório.";
+		clientesInvalidos[33][2] = "Este campo parece ser inválido.";
 
 		return Arrays.asList(clientesInvalidos);
 	}

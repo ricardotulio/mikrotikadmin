@@ -86,7 +86,7 @@
 											</c:when>
 											<c:otherwise>
 												<tr>
-													<td colspan="4">
+													<td colspan="7">
 														<h3>Não há nenhum plano cadastrado.</h3>
 													</td>
 												</tr>
