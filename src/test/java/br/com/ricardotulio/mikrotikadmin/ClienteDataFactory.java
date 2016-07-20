@@ -788,7 +788,6 @@ public class ClienteDataFactory {
 		contatoInvalido2.setTelefone("(11) 2914-2275");
 		contatoInvalido2.setCelular("(11) 930493");
 		contatoInvalido2.setEmail("ricardo.tulio@fatec.sp.gov.br");
-		;
 
 		clienteInvalido31.adicionaEndereco(endereco);
 		clienteInvalido31.adicionaContato(contatoInvalido2);
@@ -838,7 +837,7 @@ public class ClienteDataFactory {
 		clientesInvalidos[32][1] = "email";
 		clientesInvalidos[32][2] = "Este campo deve ser um email válido.";
 
-		// CEP Inválido
+		// Sem informar UF
 		Cliente clienteInvalido34 = new Cliente();
 		clienteInvalido34.setNome("Ricardo Ledo de Tulio");
 		clienteInvalido34.setCpf("374.707.968-78");
@@ -854,13 +853,13 @@ public class ClienteDataFactory {
 		enderecoInvalido14.setComplemento("Casa D");
 		enderecoInvalido14.setBairro("Vila Isolina Mazzei");
 		enderecoInvalido14.setCidade("São Paulo");
-		enderecoInvalido14.setCep("fadfadsf");
+		enderecoInvalido14.setCep("04235-024");
 
 		clienteInvalido34.adicionaEndereco(enderecoInvalido14);
 		clienteInvalido34.adicionaContato(contato);
 		clientesInvalidos[33][0] = clienteInvalido34;
 		clientesInvalidos[33][1] = "uf";
-		clientesInvalidos[33][2] = "Este campo parece ser inválido.";
+		clientesInvalidos[33][2] = "Este campo é obrigatório.";
 
 		return Arrays.asList(clientesInvalidos);
 	}

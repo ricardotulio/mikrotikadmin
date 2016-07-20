@@ -28,6 +28,7 @@ public class EditaClientesTest extends AceitacaoTest {
 	private boolean ehUmClienteValido;
 	private String campoInvalido;
 	private String mensagemEsperadaRetorno;
+	private static int contaExecucoes = 0;
 
 	public EditaClientesTest(Cliente cliente, String urlEsperadaAposSubmeterFormulario, boolean ehUmClienteValido,
 			String campoInvalido, String mensagemEsperadaRetorno) {
@@ -93,12 +94,13 @@ public class EditaClientesTest extends AceitacaoTest {
 		for (int i = 0; i < elements.size(); i++) {
 			idsClientes[i] = elements.get(i).getAttribute("data-id");
 		}
-
-		for (String idCliente : idsClientes) {
+		
+		for (String idCliente : idsClientes) {			
 			WebElement element = driver.findElement(By.cssSelector("table tbody tr[data-id='" + idCliente + "']"));
-			element.findElement(By.cssSelector(".btn-editar")).click();
+			element.findElement(By.cssSelector(".btn-editar")).click();	
+			
 			assertTrue(driver.getCurrentUrl().contains(baseUrl + "clientes/editar/" + idCliente));
-
+			
 			Endereco endereco = this.cliente.getEnderecos().iterator().next();
 			Contato contato = this.cliente.getContatos().iterator().next();
 
@@ -108,9 +110,10 @@ public class EditaClientesTest extends AceitacaoTest {
 
 			new Select(driver.findElement(By.name("planoId"))).selectByIndex(1);
 
+			WebElement diaParaPagamentos = driver.findElement(By.name("diaParaPagamentos"));
+			diaParaPagamentos.clear();
+			
 			if (this.cliente.getDiaParaPagamentos() != null) {
-				WebElement diaParaPagamentos = driver.findElement(By.name("diaParaPagamentos"));
-				diaParaPagamentos.clear();
 				diaParaPagamentos.sendKeys(this.cliente.getDiaParaPagamentos().toString());
 			}
 
@@ -139,9 +142,10 @@ public class EditaClientesTest extends AceitacaoTest {
 			logradouro.clear();
 			logradouro.sendKeys(endereco.getLogradouro());
 
+			WebElement numero = driver.findElement(By.name("numero"));
+			numero.clear();
+			
 			if (endereco.getNumero() != null) {
-				WebElement numero = driver.findElement(By.name("numero"));
-				numero.clear();
 				numero.sendKeys(endereco.getNumero().toString());
 			}
 
@@ -157,8 +161,11 @@ public class EditaClientesTest extends AceitacaoTest {
 			cidade.clear();
 			cidade.sendKeys(endereco.getCidade());
 			
+			Select uf = new Select(driver.findElement(By.name("uf")));
+			uf.selectByIndex(0);
+			
 			if (endereco.getUf() != null) {
-				new Select(driver.findElement(By.name("uf"))).selectByValue(endereco.getUf());
+				uf.selectByValue(endereco.getUf());
 			}
 
 			WebElement cep = driver.findElement(By.name("cep"));
@@ -166,7 +173,6 @@ public class EditaClientesTest extends AceitacaoTest {
 			cep.sendKeys(endereco.getCep());
 			
 			driver.findElement(By.id("btn-salvar")).click();
-
 
 			if (ehUmClienteValido) {
 				assertEquals(this.urlEsperadaAposSubmeterFormulario, driver.getCurrentUrl());

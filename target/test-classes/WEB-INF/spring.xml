@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
@@ -22,7 +21,8 @@
 
 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost/mikrotikadmin" />
+		<property name="url"
+			value="jdbc:mysql://localhost/mikrotikadmin_test?useUnicode=yes&amp;characterEncoding=UTF-8" />
 		<property name="username" value="root" />
 		<property name="password" value="123456" />
 	</bean>
@@ -33,7 +33,10 @@
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
 		</property>
-		 <property name="persistenceXmlLocation" value="classpath:/META-INF/persistence.xml"/>
+		<property name="jpaProperties">
+			<props>
+			</props>
+		</property>
 	</bean>
 
 	<!-- gerenciamento da transação pelo spring -->
@@ -42,4 +45,14 @@
 	</bean>
 
 	<tx:annotation-driven />
+
+	<!-- <bean id="gerenciadorDeFaturasSchedule" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"> 
+		<property name="targetObject" ref="gerenciadorDeFaturas" /> <property name="targetMethod" 
+		value="geraProximasFaturas" /> </bean> <bean id="gerenciadorFaturasTrigger" 
+		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> <property 
+		name="jobDetail" ref="gerenciadorDeFaturasSchedule" /> <property name="startDelay" 
+		value="1000" /> <property name="repeatInterval" value="60000" /> </bean> 
+		<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> 
+		<property name="triggers"> <list> <ref bean="gerenciadorFaturasTrigger" /> 
+		</list> </property> </bean> -->
 </beans>

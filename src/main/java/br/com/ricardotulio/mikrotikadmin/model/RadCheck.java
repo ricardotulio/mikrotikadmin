@@ -12,15 +12,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.MapsId;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity(name = "radcheck")
 public class RadCheck implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -3706626413737304561L;
 
 	@Id
@@ -43,9 +42,14 @@ public class RadCheck implements Serializable {
 	@Column
 	private String value;
 
+	@MapsId
+	@OneToOne(mappedBy = "radCheck")
+	@JoinColumn(name = "id")
+	private Cliente cliente;
+
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name = "radusergroup", joinColumns = @JoinColumn(name = "username", referencedColumnName = "username", unique = false) , inverseJoinColumns = @JoinColumn(name = "groupname", referencedColumnName = "groupname", unique = false) )
-	private List<RadGroupReply> radGroups = new ArrayList<RadGroupReply>();
+	@JoinTable(name = "radusergroup", joinColumns = @JoinColumn(name = "username", referencedColumnName = "username", unique = false), inverseJoinColumns = @JoinColumn(name = "groupname", referencedColumnName = "groupname", unique = false))
+	private List<RadGroupRepply> radGroups = new ArrayList<RadGroupRepply>();
 
 	public Long getId() {
 		return id;
@@ -87,12 +91,20 @@ public class RadCheck implements Serializable {
 		this.value = value;
 	}
 
-	public void setRadGroupReply(RadGroupReply radGroupReply) {
-		this.radGroups = new ArrayList<RadGroupReply>();
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public void setRadGroupReply(RadGroupRepply radGroupReply) {
+		this.radGroups = new ArrayList<RadGroupRepply>();
 		this.radGroups.add(radGroupReply);
 	}
-	
-	public List<RadGroupReply> getRadGroups() {
+
+	public List<RadGroupRepply> getRadGroups() {
 		return radGroups;
 	}
 

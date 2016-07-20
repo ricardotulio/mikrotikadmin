@@ -15,6 +15,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -99,6 +101,10 @@ public class Cliente {
 
 	@OneToMany(mappedBy = "cliente")
 	private Collection<Fatura> faturas = new ArrayList<Fatura>();
+
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@PrimaryKeyJoinColumn
+	private RadCheck radCheck;
 
 	public Long getId() {
 		return id;
@@ -250,6 +256,24 @@ public class Cliente {
 	public void adicionaContato(Contato contato) {
 		contato.setCliente(this);
 		this.contatos.add(contato);
+	}
+
+	public RadCheck getRadCheck() {
+		return radCheck;
+	}
+
+	public void setRadCheck(RadCheck radCheck) {
+		this.radCheck = radCheck;
+	}
+	
+	@PrePersist
+	public void createRadCheck() {
+		this.radCheck = new RadCheck();
+		this.radCheck.setId(this.id);
+		this.radCheck.setUsername(this.login);
+		this.radCheck.setValue(this.senha);
+		this.radCheck.setRadGroupReply(this.plano.getRadGroupReply());
+		this.radCheck.setCliente(this);
 	}
 
 }

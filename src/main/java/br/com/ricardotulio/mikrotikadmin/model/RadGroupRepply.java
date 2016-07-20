@@ -12,20 +12,19 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.MapsId;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity(name = "radgroupreply")
-public class RadGroupReply implements Serializable {
+public class RadGroupRepply implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 8035854998595534708L;
 
 	@Id
 	private Long id;
-	
+
 	@Column
 	@NotNull
 	@Size(max = 64)
@@ -43,12 +42,15 @@ public class RadGroupReply implements Serializable {
 	@Column
 	private String value;
 
+	@MapsId
+	@OneToOne(mappedBy = "radGroupRepply")
+	@JoinColumn(name = "id")
+	private Plano plano;
+
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name = "radusergroup", 
-		joinColumns = @JoinColumn(name = "groupname", referencedColumnName="groupname", unique = false), 
-		inverseJoinColumns = @JoinColumn(name = "username", referencedColumnName="username", unique = false))
+	@JoinTable(name = "radusergroup", joinColumns = @JoinColumn(name = "groupname", referencedColumnName = "groupname", unique = false), inverseJoinColumns = @JoinColumn(name = "username", referencedColumnName = "username", unique = false))
 	private List<RadCheck> radChecks = new ArrayList<RadCheck>();
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -87,6 +89,22 @@ public class RadGroupReply implements Serializable {
 
 	public void setValue(String value) {
 		this.value = value;
+	}
+
+	public Plano getPlano() {
+		return plano;
+	}
+
+	public void setPlano(Plano plano) {
+		this.plano = plano;
+	}
+
+	public List<RadCheck> getRadChecks() {
+		return radChecks;
+	}
+
+	public void setRadChecks(List<RadCheck> radChecks) {
+		this.radChecks = radChecks;
 	}
 
 }

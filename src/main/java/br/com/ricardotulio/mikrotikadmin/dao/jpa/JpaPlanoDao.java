@@ -31,6 +31,8 @@ public class JpaPlanoDao implements PlanoDao {
 		} else {
 			this.entityManager.persist(plano);
 		}
+
+		this.entityManager.flush();
 	}
 
 	public void remove(Plano plano) {

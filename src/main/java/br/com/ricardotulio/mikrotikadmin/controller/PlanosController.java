@@ -13,16 +13,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.ricardotulio.mikrotikadmin.dao.PlanoDao;
-import br.com.ricardotulio.mikrotikadmin.dao.RadGroupReplyDao;
 import br.com.ricardotulio.mikrotikadmin.model.Plano;
-import br.com.ricardotulio.mikrotikadmin.model.RadGroupReply;
 
 @Controller
 public class PlanosController {
 
 	private PlanoDao planoDao;
-
-	private RadGroupReplyDao radGroupReplyDao;
 
 	private static final String PLANO_CADASTRADO_COM_SUCESSO = "Plano cadastrado com sucesso!";
 	private static final String PLANO_NAO_ENCONTRADO = "Plano não encontrado!";
@@ -31,9 +27,8 @@ public class PlanosController {
 	private static final String PLANO_NAO_EXCLUIDO_POSSUI_CLIENTES = "Plano não pode ser excluído pois possui clientes vinculados.";
 
 	@Autowired
-	public PlanosController(PlanoDao planoDao, RadGroupReplyDao radGroupReplyDao) {
+	public PlanosController(PlanoDao planoDao) {
 		this.planoDao = planoDao;
-		this.radGroupReplyDao = radGroupReplyDao;
 	}
 
 	@RequestMapping(value = "/planos/", method = RequestMethod.GET)
@@ -75,14 +70,6 @@ public class PlanosController {
 	@Transactional
 	public String cadastrarPost(Plano plano, final RedirectAttributes redirectAttributes) {
 		this.planoDao.persiste(plano);
-
-		RadGroupReply radGroupReply = new RadGroupReply();
-		radGroupReply.setId(plano.getId());
-		radGroupReply.setGroupname(plano.getTitulo().replaceAll("\\s", "").toLowerCase());
-		radGroupReply.setValue(Integer.toString((int) (plano.getTaxaUpload() * 1024)) + "k/"
-				+ Integer.toString((int) (plano.getTaxaDownload() * 1024)) + "k");
-		this.radGroupReplyDao.persist(radGroupReply);
-
 		redirectAttributes.addFlashAttribute("success", PlanosController.PLANO_CADASTRADO_COM_SUCESSO);
 		return "redirect:/planos/";
 	}
@@ -104,16 +91,16 @@ public class PlanosController {
 	@Transactional
 	public String editarPost(@PathVariable(value = "id") Long id, Plano plano,
 			final RedirectAttributes redirectAttributes) {
-		if (this.planoDao.obtem(id) == null) {
+		
+		Plano planoAntigo = this.planoDao.obtem(id);
+		
+		if (planoAntigo == null) {
 			return this.informaQuePlanoNaoExiste(redirectAttributes);
 		}
 
 		plano.setId(id);
+		plano.setRadGroupRepply(planoAntigo.getRadGroupReply());
 		this.planoDao.persiste(plano);
-
-		RadGroupReply radGroupReply = radGroupReplyDao.get(plano.getId());
-		radGroupReply.setValue(Integer.toString((int) (plano.getTaxaUpload() * 1024)) + "k/"
-				+ Integer.toString((int) (plano.getTaxaDownload() * 1024)) + "k");
 
 		redirectAttributes.addFlashAttribute("success", PlanosController.PLANO_ATUALIZADO_COM_SUCESSO);
 		return "redirect:/planos/";
@@ -134,9 +121,6 @@ public class PlanosController {
 		}
 
 		this.planoDao.remove(plano);
-
-		RadGroupReply radGroupReply = radGroupReplyDao.get(plano.getId());
-		radGroupReplyDao.remove(radGroupReply);
 
 		redirectAttributes.addFlashAttribute("success", PlanosController.PLANO_EXCLUIDO_COM_SUCESSO);
 		return "redirect:/planos/";
