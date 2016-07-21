@@ -165,6 +165,14 @@ public class Plano {
 				+ Integer.toString((int) (this.getTaxaDownload() * 1024)) + "k");
 	}
 
+	public void adicionaCliente(Cliente cliente) {
+		this.getRadGroupReply().getRadChecks().add(cliente.getRadCheck());
+	}
+
+	public void removeCliente(Cliente cliente) {
+		
+	}
+
 	
 	
 

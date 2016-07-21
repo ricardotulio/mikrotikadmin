@@ -217,6 +217,11 @@ public class Cliente {
 	}
 
 	public void setPlano(Plano plano) {
+		if(this.plano != null) {
+			this.plano.removeCliente(this);
+		}
+		
+		plano.adicionaCliente(this);
 		this.plano = plano;
 	}
 
@@ -272,8 +277,9 @@ public class Cliente {
 		this.radCheck.setId(this.id);
 		this.radCheck.setUsername(this.login);
 		this.radCheck.setValue(this.senha);
-		this.radCheck.setRadGroupReply(this.plano.getRadGroupReply());
 		this.radCheck.setCliente(this);
+		
+		this.plano.adicionaCliente(this);
 	}
 
 }

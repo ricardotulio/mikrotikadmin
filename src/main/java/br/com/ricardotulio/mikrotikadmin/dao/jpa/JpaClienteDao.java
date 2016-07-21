@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import br.com.ricardotulio.mikrotikadmin.dao.ClienteDao;
 import br.com.ricardotulio.mikrotikadmin.model.Cliente;
+import br.com.ricardotulio.mikrotikadmin.model.Plano;
 
 @Repository("clienteDao")
 public class JpaClienteDao implements ClienteDao {
@@ -31,6 +32,8 @@ public class JpaClienteDao implements ClienteDao {
 		} else {
 			this.entityManager.persist(cliente);
 		}
+		
+		this.entityManager.flush();
 	}
 
 	public void remove(Cliente cliente) {
@@ -66,5 +69,11 @@ public class JpaClienteDao implements ClienteDao {
 			return resultado.get(0);
 		return null;
 	}
-
+	
+	public List<Cliente> obtemClientesPorPlano(Plano plano) {
+		Query query = this.entityManager.createQuery("SELECT c FROM Cliente c JOIN c.plano p WHERE p.id = ?", Cliente.class);
+		query.setParameter(1,  plano.getId());
+				
+		return query.getResultList();
+	}
 }
