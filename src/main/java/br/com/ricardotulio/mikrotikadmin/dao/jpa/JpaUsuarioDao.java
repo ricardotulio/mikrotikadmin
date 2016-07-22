@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import br.com.ricardotulio.mikrotikadmin.dao.UsuarioDao;
 import br.com.ricardotulio.mikrotikadmin.model.Usuario;
 
-@Repository("faturaDao")
+@Repository("usuarioDao")
 public class JpaUsuarioDao implements UsuarioDao {
 
 	@PersistenceContext
@@ -18,7 +18,7 @@ public class JpaUsuarioDao implements UsuarioDao {
 
 	public Usuario obtemUsuarioPorLogin(String login) {
 		List<Usuario> resultado = this.entityManager
-				.createQuery("SELECT u FORM Usuario u WHERE u.login = ?", Usuario.class).setParameter(1, login)
+				.createQuery("SELECT u FROM Usuario u WHERE u.login = ?", Usuario.class).setParameter(1, login)
 				.getResultList();
 
 		if (resultado.size() == 1)
