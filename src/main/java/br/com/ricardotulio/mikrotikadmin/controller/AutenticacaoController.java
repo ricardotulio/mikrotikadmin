@@ -38,7 +38,7 @@ public class AutenticacaoController {
 		}
 
 		redirectAttributes.addFlashAttribute("error", "Login e/ou senha inválidos!");
-		return "redirect:/login/";
+		return "redirect:/login";
 	}
 
 	@RequestMapping(value = { "/logout", "/logout/" }, method = RequestMethod.GET)
