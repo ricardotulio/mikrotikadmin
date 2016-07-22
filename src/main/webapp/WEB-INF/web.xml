@@ -19,11 +19,15 @@
 		<servlet-name>springmvc</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
+
 	<session-config>
 		<tracking-mode>COOKIE</tracking-mode>
 	</session-config>
-	
+
+	<session-config>
+		<session-timeout>180</session-timeout>
+	</session-config>
+
 	<error-page>
 		<error-code>404</error-code>
 		<location>/404</location>
