@@ -99,9 +99,9 @@ public class ClientesController {
 			@RequestParam("planoId") Long planoId, final RedirectAttributes redirectAttributes) {
 
 		Plano plano = this.planoDao.obtem(planoId);
-		cliente.setPlano(plano);
 		cliente.adicionaEndereco(endereco);
 		cliente.adicionaContato(contato);
+		cliente.setPlano(plano);
 		this.clienteDao.persiste(cliente);
 
 		redirectAttributes.addFlashAttribute("success", ClientesController.CLIENTE_CADASTRADO_COM_SUCESSO);
@@ -150,7 +150,7 @@ public class ClientesController {
 		Long contatoId = clienteExiste.getContatos().iterator().next().getId();
 		contato.setId(contatoId);
 		cliente.adicionaContato(contato);
-
+		
 		cliente.setPlano(this.planoDao.obtem(planoId));
 		this.clienteDao.persiste(cliente);
 

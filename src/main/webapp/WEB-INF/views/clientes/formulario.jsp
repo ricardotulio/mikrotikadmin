@@ -146,10 +146,10 @@
 							<c:if test="${not empty cliente}">readonly="readonly"</c:if> />
 					</div>
 					<div class="form-group">
-						<label for="diaParaPagamentos">Dia do Mês para Pagamentos:
+						<label for="diaParaPagamentos">Melhor dia para Pagamento:
 						</label> <input type="number" class="form-control" id="diaParaPagamentos"
 							name="diaParaPagamentos"
-							placeholder="Digite a Dia do Mẽs para Pagamentos"
+							placeholder="Digite o Melhor dia para Pagamentos"
 							required="required" data-parsley-range="[1, 28]"
 							data-parsley-range-message="Informe um dia do mês válido."
 							value="${cliente.diaParaPagamentos}" />

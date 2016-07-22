@@ -5,18 +5,12 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.DecimalMin;
@@ -68,10 +62,6 @@ public class Plano {
 
 	@OneToMany(mappedBy = "plano")
 	private Collection<Cliente> clientes = new ArrayList<Cliente>();
-
-	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@PrimaryKeyJoinColumn
-	private RadGroupRepply radGroupRepply;
 
 	public Long getId() {
 		return id;
@@ -140,40 +130,4 @@ public class Plano {
 	public Collection<Cliente> getClientes() {
 		return Collections.unmodifiableCollection(this.clientes);
 	}
-
-	public RadGroupRepply getRadGroupReply() {
-		return this.radGroupRepply;
-	}
-	
-	public void setRadGroupRepply(RadGroupRepply radGroupRepply) {
-		this.radGroupRepply = radGroupRepply;
-	}
-	
-	@PrePersist
-	public void createRadGroupReply() {
-		this.radGroupRepply = new RadGroupRepply();
-		this.radGroupRepply.setPlano(this);
-		this.radGroupRepply.setId(this.id);
-		this.radGroupRepply.setGroupname(this.titulo.replaceAll("\\s", "").toLowerCase());
-		this.radGroupRepply.setValue(Integer.toString((int) (this.getTaxaUpload() * 1024)) + "k/"
-				+ Integer.toString((int) (this.getTaxaDownload() * 1024)) + "k");
-	}
-
-	@PreUpdate
-	public void updateRadGroupReply() {
-		this.radGroupRepply.setValue(Integer.toString((int) (this.getTaxaUpload() * 1024)) + "k/"
-				+ Integer.toString((int) (this.getTaxaDownload() * 1024)) + "k");
-	}
-
-	public void adicionaCliente(Cliente cliente) {
-		this.getRadGroupReply().getRadChecks().add(cliente.getRadCheck());
-	}
-
-	public void removeCliente(Cliente cliente) {
-		
-	}
-
-	
-	
-
 }

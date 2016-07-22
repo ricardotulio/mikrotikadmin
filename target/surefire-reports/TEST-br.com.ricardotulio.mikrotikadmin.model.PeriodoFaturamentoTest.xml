@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="300" failures="0" name="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" time="0.145" errors="0" skipped="0">
+<testsuite tests="300" failures="0" name="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" time="0.125" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/opt/jdk/jdk1.8.0_51/jre/lib/amd64"/>
@@ -59,50 +59,50 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[0]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[0]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[0]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[0]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[1]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[1]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[1]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[2]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[2]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[2]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[2]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[3]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[3]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[3]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[4]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[4]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[4]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[4]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[5]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[5]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[5]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[5]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[6]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[6]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[6]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[7]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[7]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[7]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[8]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[8]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[8]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[8]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[9]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[9]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[9]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[9]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[10]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[10]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[10]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[10]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[11]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[11]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[11]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[11]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[12]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[12]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[12]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[13]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[13]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[13]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[13]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[14]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[14]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[14]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[14]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[15]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[15]" time="0"/>
@@ -111,14 +111,14 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[16]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[16]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[17]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[17]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[17]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[17]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[18]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[18]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[18]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[18]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[19]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[19]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[19]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[19]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[20]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[20]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[20]" time="0"/>
@@ -129,10 +129,10 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[22]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[22]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[23]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[23]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[23]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[23]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[24]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[24]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[24]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[24]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[25]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[25]" time="0"/>
@@ -143,7 +143,7 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[27]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[27]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[27]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[28]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[28]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[28]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[28]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[29]" time="0"/>
@@ -154,7 +154,7 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[30]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[31]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[31]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[31]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[31]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[32]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[32]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[32]" time="0"/>
@@ -168,84 +168,84 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[35]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[35]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[36]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[36]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[36]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[36]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[37]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[37]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[37]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[37]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[38]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[38]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[38]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[39]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[39]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[39]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[39]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[39]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[40]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[40]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[40]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[41]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[40]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[41]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[41]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[41]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[42]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[42]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[42]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[43]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[43]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[43]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[43]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[44]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[44]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[44]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[44]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[45]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[45]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[45]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[45]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[45]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[46]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[46]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[46]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[47]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[47]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[47]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[48]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[48]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[48]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[48]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[49]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[49]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[49]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[49]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[50]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[50]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[50]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[50]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[51]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[51]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[51]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[52]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[52]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[52]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[53]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[53]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[53]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[53]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[53]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[54]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[54]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[54]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[54]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[55]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[55]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[55]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[55]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[56]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[56]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[56]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[56]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[57]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[57]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[57]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[57]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[58]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[58]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[58]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[58]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[59]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[59]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[59]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[59]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[59]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[60]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[60]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[60]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[61]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[61]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[61]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[62]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[62]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[62]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[62]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[63]" time="0"/>
@@ -253,13 +253,13 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[63]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[64]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[64]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[64]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[64]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[65]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[65]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[65]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[66]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[66]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[66]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[66]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[66]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[67]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[67]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[67]" time="0"/>
@@ -269,28 +269,28 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[69]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[69]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[69]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[70]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[70]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[70]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[70]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[70]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[71]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[71]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[71]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[72]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[72]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[72]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[72]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[73]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[73]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[73]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[73]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[74]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[74]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[74]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[74]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[75]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[75]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[75]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[75]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[75]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[76]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[76]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[76]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[77]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[77]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[77]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[77]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[78]" time="0"/>
@@ -299,19 +299,19 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[79]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[79]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[79]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[80]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[80]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[80]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[80]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[81]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[81]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[81]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[81]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[82]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[82]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[82]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[83]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[82]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[83]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[83]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[83]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[84]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[84]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[84]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[84]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[85]" time="0"/>
@@ -321,24 +321,24 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[86]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[86]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[87]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[87]" time="0.001"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[87]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[87]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[88]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[88]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[88]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[89]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[89]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[89]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[89]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[90]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[90]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[90]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[91]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[91]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[91]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[91]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[92]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[92]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[92]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[93]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[93]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[93]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[93]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[94]" time="0"/>
@@ -350,8 +350,8 @@
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[96]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[96]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[96]" time="0"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[97]" time="0.001"/>
-  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[97]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[97]" time="0"/>
+  <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[97]" time="0.001"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCriaPeriodoFaturamentoComIntervaloEmDias[97]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaPeriodoCompletaUmMes[98]" time="0"/>
   <testcase classname="br.com.ricardotulio.mikrotikadmin.model.PeriodoFaturamentoTest" name="testaSeCalculaIntervaloEntrePeriodoFaturamento[98]" time="0"/>

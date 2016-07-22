@@ -12,8 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.MapsId;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -41,11 +39,6 @@ public class RadCheck implements Serializable {
 
 	@Column
 	private String value;
-
-	@MapsId
-	@OneToOne(mappedBy = "radCheck")
-	@JoinColumn(name = "id")
-	private Cliente cliente;
 
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinTable(name = "radusergroup", joinColumns = @JoinColumn(name = "username", referencedColumnName = "username", unique = false), inverseJoinColumns = @JoinColumn(name = "groupname", referencedColumnName = "groupname", unique = false))
@@ -89,14 +82,6 @@ public class RadCheck implements Serializable {
 
 	public void setValue(String value) {
 		this.value = value;
-	}
-
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
 	}
 
 	public void setRadGroupReply(RadGroupRepply radGroupReply) {

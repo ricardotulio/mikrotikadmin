@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import br.com.ricardotulio.mikrotikadmin.dao.PlanoDao;
 import br.com.ricardotulio.mikrotikadmin.model.Plano;
+import br.com.ricardotulio.mikrotikadmin.model.RadGroupRepply;
 
 @Repository("planoDao")
 public class JpaPlanoDao implements PlanoDao {
@@ -26,10 +27,28 @@ public class JpaPlanoDao implements PlanoDao {
 	}
 
 	public void persiste(Plano plano) {
-		if (plano.getId() != null) {
-			this.entityManager.merge(plano);
-		} else {
+		if (plano.getId() == null) {
 			this.entityManager.persist(plano);
+
+			RadGroupRepply radGroupReply = new RadGroupRepply();
+			radGroupReply = new RadGroupRepply();
+			radGroupReply.setId(plano.getId());
+			radGroupReply.setGroupname(plano.getTitulo().replaceAll("\\s", "").toLowerCase());
+			radGroupReply.setValue(Integer.toString((int) (plano.getTaxaUpload() * 1024)) + "k/"
+					+ Integer.toString((int) (plano.getTaxaDownload() * 1024)) + "k");
+
+			this.entityManager.persist(radGroupReply);
+		} else {
+			this.entityManager.merge(plano);
+
+			RadGroupRepply radGroupReply = this.entityManager.createQuery(
+					"SELECT rg FROM br.com.ricardotulio.mikrotikadmin.model.RadGroupRepply rg WHERE rg.id = ?",
+					RadGroupRepply.class).setParameter(1, plano.getId()).getSingleResult();
+
+			radGroupReply.setValue(Integer.toString((int) (plano.getTaxaUpload() * 1024)) + "k/"
+					+ Integer.toString((int) (plano.getTaxaDownload() * 1024)) + "k");
+
+			this.entityManager.merge(radGroupReply);
 		}
 
 		this.entityManager.flush();

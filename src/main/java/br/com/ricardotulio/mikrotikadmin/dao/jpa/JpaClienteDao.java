@@ -11,6 +11,8 @@ import org.springframework.stereotype.Repository;
 import br.com.ricardotulio.mikrotikadmin.dao.ClienteDao;
 import br.com.ricardotulio.mikrotikadmin.model.Cliente;
 import br.com.ricardotulio.mikrotikadmin.model.Plano;
+import br.com.ricardotulio.mikrotikadmin.model.RadCheck;
+import br.com.ricardotulio.mikrotikadmin.model.RadGroupRepply;
 
 @Repository("clienteDao")
 public class JpaClienteDao implements ClienteDao {
@@ -27,12 +29,34 @@ public class JpaClienteDao implements ClienteDao {
 	}
 
 	public void persiste(Cliente cliente) {
-		if (cliente.getId() != null) {
-			this.entityManager.merge(cliente);
-		} else {
+		if (cliente.getId() == null) {
 			this.entityManager.persist(cliente);
+
+			RadCheck radCheck = new RadCheck();
+			radCheck.setId(cliente.getId());
+			radCheck.setUsername(cliente.getLogin());
+			radCheck.setValue(cliente.getSenha());
+
+			RadGroupRepply radGroupReply = this.entityManager.createQuery(
+					"SELECT rg FROM br.com.ricardotulio.mikrotikadmin.model.RadGroupRepply rg WHERE rg.id = ?",
+					RadGroupRepply.class).setParameter(1, cliente.getPlano().getId()).getSingleResult();
+
+			radCheck.getRadGroups().add(radGroupReply);
+			this.entityManager.persist(radCheck);
+		} else {
+			this.entityManager.merge(cliente);
+			
+			RadGroupRepply radGroupReply = this.entityManager.createQuery(
+					"SELECT rg FROM br.com.ricardotulio.mikrotikadmin.model.RadGroupRepply rg WHERE rg.id = ?",
+					RadGroupRepply.class).setParameter(1, cliente.getPlano().getId()).getSingleResult();
+
+			RadCheck radCheck = this.entityManager
+					.createQuery("SELECT rc FROM br.com.ricardotulio.mikrotikadmin.model.RadCheck rc WHERE rc.id = ?", RadCheck.class)
+					.setParameter(1, cliente.getId()).getSingleResult();
+			
+			radCheck.setRadGroupReply(radGroupReply);
+			this.entityManager.persist(radCheck);
 		}
-		
 		this.entityManager.flush();
 	}
 
@@ -69,11 +93,12 @@ public class JpaClienteDao implements ClienteDao {
 			return resultado.get(0);
 		return null;
 	}
-	
+
 	public List<Cliente> obtemClientesPorPlano(Plano plano) {
-		Query query = this.entityManager.createQuery("SELECT c FROM Cliente c JOIN c.plano p WHERE p.id = ?", Cliente.class);
-		query.setParameter(1,  plano.getId());
-				
+		Query query = this.entityManager.createQuery("SELECT c FROM Cliente c JOIN c.plano p WHERE p.id = ?",
+				Cliente.class);
+		query.setParameter(1, plano.getId());
+
 		return query.getResultList();
 	}
 }

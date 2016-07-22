@@ -99,7 +99,6 @@ public class PlanosController {
 		}
 
 		plano.setId(id);
-		plano.setRadGroupRepply(planoAntigo.getRadGroupReply());
 		this.planoDao.persiste(plano);
 
 		redirectAttributes.addFlashAttribute("success", PlanosController.PLANO_ATUALIZADO_COM_SUCESSO);

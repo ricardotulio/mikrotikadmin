@@ -234,6 +234,7 @@
 <script src="<c:url value="/assets/plugins/parsley/parsley-telefone.js" />"></script>
 <script src="<c:url value="/assets/plugins/parsley/parsley-titulo-plano-duplicado.js" />"></script>
 <script src="<c:url value="/assets/plugins/parsley/i18n/pt-br.js" />"></script>
+<script src="<c:url value="/assets/plugins/input-mask/jquery.inputmask.js" />"></script>
 
 <!-- Script da página de planos -->
 <script src="<c:url value="/assets/js/pages/planos.js" />"></script>
