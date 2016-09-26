@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.ricardotulio.mikrotikadmin.dao.FaturaDao;
@@ -42,6 +43,7 @@ public class FaturasController {
 
 		model.addAttribute("faturas", faturas);
 		model.addAttribute("listaStatusFatura", listaStatusFatura);
+
 		return "faturas/index";
 	}
 
@@ -76,10 +78,10 @@ public class FaturasController {
 	public String cadastrarGet(Model model) {
 		List<StatusFatura> listaStatusFatura = Arrays.asList(StatusFatura.values());
 		List<FormaPagamento> listaFormasPagamento = Arrays.asList(FormaPagamento.values());
-		
+
 		model.addAttribute("listaStatusFatura", listaStatusFatura);
 		model.addAttribute("listaFormasPagamento", listaFormasPagamento);
-		
+
 		return "faturas/cadastrar";
 	}
 
@@ -109,5 +111,10 @@ public class FaturasController {
 		redirectAttributes.addFlashAttribute("success", FaturasController.FATURA_PAGA_COM_SUCESSO);
 		return "redirect:/faturas/";
 	}
-
+	
+	@ResponseBody
+	public String pagarPagSeguro(@PathVariable("transactionId") Long transactionId) {
+		System.out.println("Entrou aqui");
+		return "ok";
+	}
 }

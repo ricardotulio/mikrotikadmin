@@ -18,5 +18,4 @@ public class GravaFaturaNoBanco implements AcaoAposGerarFatura {
 	public void executa(Fatura fatura) {
 		this.faturaDao.persiste(fatura);
 	}
-
 }

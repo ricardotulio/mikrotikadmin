@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 public class DataVencimento {
 
-	public static final int NUMERO_DIAS_ANTECEDENCIA_VECTO_FATURA = 10;
+	public static final int NUMERO_DIAS_ANTECEDENCIA_VECTO_FATURA = 4;
 
 	private Calendar dataVencimento;
 

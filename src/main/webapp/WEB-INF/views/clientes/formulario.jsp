@@ -150,7 +150,7 @@
 						</label> <input type="number" class="form-control" id="diaParaPagamentos"
 							name="diaParaPagamentos"
 							placeholder="Digite o Melhor dia para Pagamentos"
-							required="required" data-parsley-range="[1, 28]"
+							required="required" data-parsley-range="[1, 30]"
 							data-parsley-range-message="Informe um dia do mês válido."
 							value="${cliente.diaParaPagamentos}" />
 					</div>

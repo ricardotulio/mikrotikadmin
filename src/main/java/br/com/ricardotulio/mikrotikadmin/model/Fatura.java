@@ -53,8 +53,11 @@ public class Fatura {
 
 	@Column
 	@Temporal(TemporalType.DATE)
-	@NotNull
 	private Calendar dataPagamento;
+	
+	@Column
+	@NotNull
+	private String urlBoleto;
 
 	@Column
 	@Enumerated(EnumType.ORDINAL)
@@ -146,6 +149,14 @@ public class Fatura {
 
 	public void setStatus(StatusFatura status) {
 		this.status = status;
+	}
+
+	public String getUrlBoleto() {
+		return urlBoleto;
+	}
+
+	public void setUrlBoleto(String urlBoleto) {
+		this.urlBoleto = urlBoleto;
 	}
 
 	public FormaPagamento getFormaPagamento() {

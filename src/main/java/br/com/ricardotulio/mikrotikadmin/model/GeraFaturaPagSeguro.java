@@ -9,10 +9,10 @@ import br.com.uol.pagseguro.enums.ShippingType;
 import br.com.uol.pagseguro.exception.PagSeguroServiceException;
 import br.com.uol.pagseguro.properties.PagSeguroConfig;
 
-public class GerarFaturaPagSeguro implements AcaoAposGerarFatura {
+public class GeraFaturaPagSeguro implements AcaoAposGerarFatura {
 
 	public void executa(Fatura fatura) {
-		Cliente cliente = fatura.getCliente();		
+		Cliente cliente = fatura.getCliente();
 		Endereco endereco = cliente.getEnderecos().iterator().next();
 		Contato contato = cliente.getContatos().iterator().next();
 
@@ -28,11 +28,14 @@ public class GerarFaturaPagSeguro implements AcaoAposGerarFatura {
 		Checkout paymentRequest = new Checkout();
 		paymentRequest.addItem(idFormatado, descricaoBoleto, quantidade, valorBoleto, peso, valorFrete);
 
-		paymentRequest.setShippingAddress("BRA", endereco.getUf(), endereco.getCidade(), endereco.getBairro(),
-				endereco.getCep(), endereco.getLogradouro(), endereco.getNumero().toString(),
+		paymentRequest.setShippingAddress("BRA", endereco.getUf().toUpperCase(), endereco.getCidade(),
+				endereco.getBairro(), endereco.getCep(), endereco.getLogradouro(), endereco.getNumero().toString(),
 				endereco.getComplemento());
 
-		paymentRequest.setSender(cliente.getNome(), contato.getEmail(), "11", contato.getTelefone(), DocumentType.CPF,
+		String telefoneFormatado = contato.getTelefone().split(" ")[1];
+		telefoneFormatado = telefoneFormatado.replace("-", "");
+
+		paymentRequest.setSender(cliente.getNome(), contato.getEmail(), "11", telefoneFormatado, DocumentType.CPF,
 				cliente.getCpf());
 
 		paymentRequest.setShippingType(ShippingType.NOT_SPECIFIED);
@@ -41,14 +44,15 @@ public class GerarFaturaPagSeguro implements AcaoAposGerarFatura {
 		paymentRequest.setNotificationURL("https://www.mikrotikadmin.com");
 		paymentRequest.setCurrency(Currency.BRL);
 
+		boolean onlyCheckoutCode = false;
+		String urlParaPagamento;
+		
 		try {
-			boolean onlyCheckoutCode = false;
-			String response = paymentRequest.register(PagSeguroConfig.getAccountCredentials(), onlyCheckoutCode);
-
-			System.out.println(response);
+			urlParaPagamento = paymentRequest.register(PagSeguroConfig.getAccountCredentials(), onlyCheckoutCode);
+			fatura.setUrlBoleto(urlParaPagamento);
 		} catch (PagSeguroServiceException e) {
 			e.printStackTrace();
 		}
-	}
 
+	}
 }

@@ -26,6 +26,7 @@ public class JpaFaturaDao implements FaturaDao {
 
 	public void persiste(Fatura fatura) {
 		this.entityManager.persist(fatura);
+		this.entityManager.flush();
 	}
 
 	public void remove(Fatura fatura) {

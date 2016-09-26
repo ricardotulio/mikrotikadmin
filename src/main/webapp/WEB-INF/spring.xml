@@ -10,8 +10,10 @@
 
 	<context:component-scan base-package="br.com.ricardotulio.mikrotikadmin" />
 	<mvc:annotation-driven />
-	<mvc:resources location="/assets/" mapping="/assets/**" cache-period="31556926" />
-	<mvc:resources location="/bower_components/" mapping="/bower_components/**" cache-period="31556926" />
+	<mvc:resources location="/assets/" mapping="/assets/**"
+		cache-period="31556926" />
+	<mvc:resources location="/bower_components/" mapping="/bower_components/**"
+		cache-period="31556926" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -42,17 +44,29 @@
 
 	<tx:annotation-driven />
 
-	<!-- <bean id="gerenciadorDeFaturasSchedule" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"> 
-		<property name="targetObject" ref="gerenciadorDeFaturas" /> <property name="targetMethod" 
-		value="geraProximasFaturas" /> </bean> <bean id="gerenciadorFaturasTrigger" 
-		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> <property 
-		name="jobDetail" ref="gerenciadorDeFaturasSchedule" /> <property name="startDelay" 
-		value="1000" /> <property name="repeatInterval" value="60000" /> </bean> 
-		<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> 
-		<property name="triggers"> <list> <ref bean="gerenciadorFaturasTrigger" /> 
-		</list> </property> </bean> -->
+	<bean id="gerenciadorDeFaturasSchedule"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="gerenciadorDeFaturas" />
+		<property name="targetMethod" value="geraProximasFaturas" />
+	</bean>
+	
+	<bean id="gerenciadorFaturasTrigger"
+		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" ref="gerenciadorDeFaturasSchedule" />
+		<property name="startDelay" value="1000" />
+		<property name="repeatInterval" value="86400000" />
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="gerenciadorFaturasTrigger" />
+			</list>
+		</property>
+	</bean>
 
 	<mvc:interceptors>
-		<bean class="br.com.ricardotulio.mikrotikadmin.interceptors.AutorizadorInterceptor" />
+		<bean
+			class="br.com.ricardotulio.mikrotikadmin.interceptors.AutorizadorInterceptor" />
 	</mvc:interceptors>
 </beans>

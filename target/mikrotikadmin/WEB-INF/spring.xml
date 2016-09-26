@@ -10,8 +10,8 @@
 
 	<context:component-scan base-package="br.com.ricardotulio.mikrotikadmin" />
 	<mvc:annotation-driven />
-	<mvc:resources location="/assets/" mapping="/assets/**" />
-	<mvc:resources location="/bower_components/" mapping="/bower_components/**" />
+	<mvc:resources location="/assets/" mapping="/assets/**" cache-period="31556926" />
+	<mvc:resources location="/bower_components/" mapping="/bower_components/**" cache-period="31556926" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -21,7 +21,8 @@
 
 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost/mikrotikadmin?useUnicode=yes&amp;characterEncoding=UTF-8" />
+		<property name="url"
+			value="jdbc:mysql://localhost/mikrotikadmin?useUnicode=yes&amp;characterEncoding=UTF-8" />
 		<property name="username" value="root" />
 		<property name="password" value="123456" />
 	</bean>
@@ -40,28 +41,18 @@
 	</bean>
 
 	<tx:annotation-driven />
-	
-	<!-- 
 
-	<bean id="gerenciadorDeFaturasSchedule"
-		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-		<property name="targetObject" ref="gerenciadorDeFaturas" />
-		<property name="targetMethod" value="geraProximasFaturas" />
-	</bean>
+	<!-- <bean id="gerenciadorDeFaturasSchedule" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"> 
+		<property name="targetObject" ref="gerenciadorDeFaturas" /> <property name="targetMethod" 
+		value="geraProximasFaturas" /> </bean> <bean id="gerenciadorFaturasTrigger" 
+		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> <property 
+		name="jobDetail" ref="gerenciadorDeFaturasSchedule" /> <property name="startDelay" 
+		value="1000" /> <property name="repeatInterval" value="60000" /> </bean> 
+		<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> 
+		<property name="triggers"> <list> <ref bean="gerenciadorFaturasTrigger" /> 
+		</list> </property> </bean> -->
 
-	<bean id="gerenciadorFaturasTrigger"
-		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
-		<property name="jobDetail" ref="gerenciadorDeFaturasSchedule" />
-		<property name="startDelay" value="1000" />
-		<property name="repeatInterval" value="60000" />
-	</bean>
-
-	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
-		<property name="triggers">
-			<list>
-				<ref bean="gerenciadorFaturasTrigger" />
-			</list>
-		</property>
-	</bean>
-	 -->	
+	<mvc:interceptors>
+		<bean class="br.com.ricardotulio.mikrotikadmin.interceptors.AutorizadorInterceptor" />
+	</mvc:interceptors>
 </beans>

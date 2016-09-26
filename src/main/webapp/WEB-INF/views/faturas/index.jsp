@@ -107,7 +107,7 @@
 											</c:when>
 											<c:otherwise>
 												<tr>
-													<td colspan="4">
+													<td colspan="10">
 														<h3>Não há nenhum fatura registrada.</h3>
 													</td>
 												</tr>
