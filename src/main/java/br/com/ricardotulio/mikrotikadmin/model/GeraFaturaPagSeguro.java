@@ -44,12 +44,13 @@ public class GeraFaturaPagSeguro implements AcaoAposGerarFatura {
 		paymentRequest.setNotificationURL("https://www.mikrotikadmin.com");
 		paymentRequest.setCurrency(Currency.BRL);
 
-		boolean onlyCheckoutCode = false;
-		String urlParaPagamento;
+		boolean onlyCheckoutCode = true;
+		String idTransacao;
 		
 		try {
-			urlParaPagamento = paymentRequest.register(PagSeguroConfig.getAccountCredentials(), onlyCheckoutCode);
-			fatura.setUrlBoleto(urlParaPagamento);
+			idTransacao = paymentRequest.register(PagSeguroConfig.getAccountCredentials(), onlyCheckoutCode);
+			fatura.setUrlParaPagamento(idTransacao);
+			fatura.setIdTransacao(idTransacao);
 		} catch (PagSeguroServiceException e) {
 			e.printStackTrace();
 		}

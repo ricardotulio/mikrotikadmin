@@ -26,11 +26,9 @@ public class GerenciadorDeFaturas {
 	}
 
 	@Transactional
-	public List<Fatura> geraProximasFaturas() {
+	public List<Fatura> geraProximasFaturas() {	
 		Calendar dataVencimentoPrevisto = Calendar.getInstance();
 		dataVencimentoPrevisto.add(Calendar.DATE, DataVencimento.NUMERO_DIAS_ANTECEDENCIA_VECTO_FATURA);
-
-		System.out.println("Dia do vencimento: " + dataVencimentoPrevisto.get(Calendar.DAY_OF_MONTH));
 
 		List<Cliente> clientes = this.clienteDao
 				.obtemListaAtivosComVencimentoNoDia(dataVencimentoPrevisto.get(Calendar.DAY_OF_MONTH));
@@ -45,30 +43,17 @@ public class GerenciadorDeFaturas {
 		acoesAposGerarFatura.add(gravaFaturaNoBanco);
 		acoesAposGerarFatura.add(enviarFaturaPorEmail);
 
-		System.out.println("Número de clientes: " + clientes.size());
-
 		for (Cliente cliente : clientes) {
 			Fatura fatura = this.geradorDeFatura.geraFatura(cliente);
-			fatura.setUrlBoleto("teste");
 
 			if (fatura.deveSerLancada()) {
 				for (AcaoAposGerarFatura acao : acoesAposGerarFatura) {
-					try {
-						acao.executa(fatura);
-					} catch (Exception e) {
-						System.out.println(e.getMessage());
-					}
+					acao.executa(fatura);
 				}
 
 				faturas.add(fatura);
-			} else {
-				System.out.println("Não foi lançada!");
 			}
-
-			System.out.println("Foi lançada!");
 		}
-
-		System.out.println("Número de faturas lançadas: " + faturas.size());
 
 		return faturas;
 	}

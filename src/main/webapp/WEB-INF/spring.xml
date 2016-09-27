@@ -26,7 +26,7 @@
 		<property name="url"
 			value="jdbc:mysql://localhost/mikrotikadmin?useUnicode=yes&amp;characterEncoding=UTF-8" />
 		<property name="username" value="root" />
-		<property name="password" value="123456" />
+		<property name="password" value="root" />
 	</bean>
 
 	<bean id="entityManagerFactory"
@@ -49,14 +49,13 @@
 		<property name="targetObject" ref="gerenciadorDeFaturas" />
 		<property name="targetMethod" value="geraProximasFaturas" />
 	</bean>
-	
+
 	<bean id="gerenciadorFaturasTrigger"
-		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="gerenciadorDeFaturasSchedule" />
-		<property name="startDelay" value="1000" />
-		<property name="repeatInterval" value="86400000" />
+		<property name="cronExpression" value="0 0 17 * * ?" />
 	</bean>
-	
+
 	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>

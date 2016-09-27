@@ -31,8 +31,11 @@ public class EnviaFaturaPorEmail implements AcaoAposGerarFatura {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress("ledo.tulio@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(fatura.getCliente().getContatos().iterator().next().getEmail()));
-			message.setSubject("Testing Subject");
-			message.setText("Dear Mail Crawler," + "\n\n No spam to my email, please! URL: " + fatura.getUrlBoleto());
+			message.setSubject("Boleto para pagamento da internet");
+			message.setText("Prezado(a) Sr(a). " + fatura.getCliente().getNome() 
+					+ ",\n\n Segue o enderçeo para efetuar o pagamento dos serviços de internet: " + fatura.getUrlParaPagamento() + "\n\n" 
+					+ "Para efetuar o pagamento, clique no endereço acima e você será redirecionado para o site do PagSeguro. Ao acessar o site do PagSeguro, basta digitar o seu endereço de e-mail, selecionar a opção \"Não tenho conta no PagSeguro\" e clicar em \"Pagar com segurança\". Após isso, serão exibidas diversas opções para pagamento, como cartão de crédito, débito online ou boleto. Preencha o formulário completo e efetue o seu pagamento. Caso o seu pagamento já tenha sido feito, desconsidere esta mensagem.\n\n\n\n"
+					+ "Obrigado por escolher o nosso serviço.");
 
 			Transport.send(message);
 		} catch (MessagingException e) {

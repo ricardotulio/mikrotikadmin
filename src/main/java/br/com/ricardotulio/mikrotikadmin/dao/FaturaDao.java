@@ -13,5 +13,7 @@ public interface FaturaDao {
 	public void persiste(Fatura fatura);
 	
 	public void remove(Fatura fatura);
+
+	public Fatura obtemPorIdTransacao(String idTransacao);
 	
 }

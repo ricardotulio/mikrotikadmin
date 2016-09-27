@@ -54,10 +54,6 @@ public class Fatura {
 	@Column
 	@Temporal(TemporalType.DATE)
 	private Calendar dataPagamento;
-	
-	@Column
-	@NotNull
-	private String urlBoleto;
 
 	@Column
 	@Enumerated(EnumType.ORDINAL)
@@ -67,6 +63,12 @@ public class Fatura {
 	@Column
 	@Enumerated(EnumType.ORDINAL)
 	private FormaPagamento formaPagamento;
+	
+	@Column
+	private String idTransacao;
+	
+	@Column
+	private String urlParaPagamento;
 
 	@Column(updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
@@ -151,20 +153,28 @@ public class Fatura {
 		this.status = status;
 	}
 
-	public String getUrlBoleto() {
-		return urlBoleto;
-	}
-
-	public void setUrlBoleto(String urlBoleto) {
-		this.urlBoleto = urlBoleto;
-	}
-
 	public FormaPagamento getFormaPagamento() {
 		return formaPagamento;
 	}
 
 	public void setFormaPagamento(FormaPagamento formaPagamento) {
 		this.formaPagamento = formaPagamento;
+	}
+
+	public String getIdTransacao() {
+		return idTransacao;
+	}
+
+	public void setIdTransacao(String idTransacao) {
+		this.idTransacao = idTransacao;
+	}
+
+	public String getUrlParaPagamento() {
+		return urlParaPagamento;
+	}
+
+	public void setUrlParaPagamento(String urlParaPagamento) {
+		this.urlParaPagamento = urlParaPagamento;
 	}
 
 	public Calendar getCriadoEm() {
